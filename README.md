@@ -1,2 +1,3 @@
-# [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/template-overviews/clean-blog-jekyll/) - Official Jekyll Version
-## 문제가 있는데 해결이 안됌.....
+# SUNIO BLOG.
+### Topic :: Develop, Life, Knowledge
+### Theme :: [Start Bootstrap - Clean Blog Jekyll](https://startbootstrap.com/template-overviews/clean-blog-jekyll/) - Official Jekyll Version
