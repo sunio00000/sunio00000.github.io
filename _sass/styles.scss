@@ -1,13 +1,14 @@
 // Import Core Clean Blog SCSS
 @import "../assets/css/syntax-one-dark.css";
 @import "../assets/vendor/startbootstrap-clean-blog/scss/clean-blog.scss";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 /* Style Blog Font */
 h3, h4, h5, h6, p, h1, h2, pre, ul, ol, dl {
     margin-bottom: 15px;
     font-family: 'Noto Sans KR', sans-serif;
 }
+
  blockquote, figure {
     margin-bottom: 15px;
     font-family: 'Jua', sans-serif;
