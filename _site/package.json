@@ -11,7 +11,7 @@
         "theme",
         "template"
     ],
-    "homepage": "https://sunio0000.github.io.git",
+    "homepage": "https://startbootstrap.com/template-overviews/clean-blog",
     "bugs": {
         "url": "https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/issues",
         "email": "feedback@startbootstrap.com"
@@ -23,7 +23,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/sunio00000/sunio0000.github.io.git"
+        "url": "https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll.git"
     },
     "dependencies": {
         "bootstrap": "4.3.1",

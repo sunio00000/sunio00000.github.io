@@ -1,0 +1,20 @@
+I"�<p>글을 겁나 못쓰는 사람의 개발 일지.</p>
+
+<p>개발, 생각, 일상의 내용을 기록하는 창구로 사용하게 될 것 같다.</p>
+
+<p>해야지 해야지 했는데 이제야 하게되었구나 싶다.</p>
+
+<p>오늘 이후로 주기적인 TIL을 기록하게 될 것 같다.</p>
+
+<p>내용은 일반적인 개발 블로그들과 다르게 접근하고 싶다.<br />
+고리타분하고 3초 들러 지나갈 블로그가 아니고 싶기 때문이다.<br />
+(근데 벌써 고리타분한 것 같다..)</p>
+
+<p>아무튼, 많은 것들이 시작되었고, 또다른 험난한 여정이 시작될 것 같다.<br />
+나에게 있어 이 좋은 기회를 나의 삶의 한 자랑거리가 될 수 있도록 열심히 해보자.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'Hello My Coding Life!'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>fin.</p>
+:ET

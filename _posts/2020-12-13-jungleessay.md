@@ -1,17 +1,16 @@
 ---
 layout: post
-title: "SW JUNGLE, 급하게 돌아보기"
+title: "🎲 SW JUNGLE, 급하게 돌아보기"
 date: 2020-12-13 17:14:00 -0400
 categories: daily, essay
 background: '/img/bg-jungle.jpg'
-comments: true
 ---
-## {'loc': '정글', 'stat': '정신 나가는 중..😱'} 
+## {'loc': '정글', 'stat': '정신 나가는 중..'} 
 
 > _찬찬히 나를 돌아보라고 하시지만, 그럴 여유 없다. 급하게 돌아보자_ 
 
-
-![209704](https://user-images.githubusercontent.com/26760693/102010727-54581180-3d83-11eb-940b-d5adcddee797.gif)
+<p align = "center">
+<img src="https://user-images.githubusercontent.com/26760693/102010727-54581180-3d83-11eb-940b-d5adcddee797.gif" width="400" height="300" /> </p>
 
 <br>
 
@@ -42,7 +41,9 @@ comments: true
 
 - 0주차는 해커톤마냥 웹프로젝트를 팀으로 하는것이였다.<br>대부분이 비전공자이고 개발에 깊은 조예가 없었기 때문에 다짜고짜 팀프로젝트는 당황의 연속이였다.<br>'웹 개발이라고는 입교시험 때 배운게 전분데 뭘 어떻게 하라는거지?' 우리는 혼란에 휩싸였다.<br>
  > 저 Pull Request 처음 해봐요... fork는 뭐에요...😂
-![pull](https://user-images.githubusercontent.com/26760693/102012066-a6049a00-3d8b-11eb-86c2-56f06e1ec3b1.png)
+<p align = "center">
+<img src="https://user-images.githubusercontent.com/26760693/102012066-a6049a00-3d8b-11eb-86c2-56f06e1ec3b1.png" width="400" height="300" /> </p>
+![pull]()
 *31 Closed pull request..*
 - 첫날 몇 시간동안 짧게 배운 github를 이용해서 협업하는 방법에 대해 고민하고, 바로 실전에 적용해서 프로젝트를 제작하였다.<br>포크한 개인 레포에서 생성한 기관 레포에 풀리퀘를 보내고 머지하고 컨플릭트에러 나고, 다시 푸쉬하고 풀리퀘하...<br>그렇게 3박 4일을 어제 처음만난 팀원들과 함께 처음보는 프레임워크와 개발언어, 협업툴을 이용하는 과정을 거쳐, 우리가 개발한 웹이 서버에서 돌아가는 모습을 보니 너무 뿌듯했다.<br>동시에, 세상에 그렇게 많은 웹페이지들이 어떻게 돌아가는건지 경외감을 느끼며 0주차가 지나갔다. 
   
