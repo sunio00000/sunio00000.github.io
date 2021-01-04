@@ -1,4 +1,4 @@
-I"l<p>깃을 통해 정보와 프로젝트, 제대로 공유하는 방법</p>
+I"�<p>깃을 통해 정보와 프로젝트, 제대로 공유하는 방법</p>
 
 <h2 id="tools">Tools</h2>
 <p><code class="language-plaintext highlighter-rouge">Git</code></p>
@@ -10,7 +10,8 @@
 도구는 손짓 발짓이 될 수도 있고, 코드 그 자체가 되기도 한다. (뭐 이외에도 굉장하고 무궁무진한 방법들이 많긴하다. 🙄)<br />
 우리는 효율적인 의사소통 도구의 활용이 우리에게 당연히도 최대의 이득을 가져다 줄 것이라 생각한다.<br />
 하지만, 게을러서 포기하는 어떠한 (수많은) 것들이 있다..<br />
-그 중에 버전관리 프로그램을 사용하며 작성하는 <code class="language-plaintext highlighter-rouge">Commit message</code>를 이쁘고 명료하게 작성해보자.</p>
+그 중에 버전관리 프로그램을 사용하며 작성하는 <code class="language-plaintext highlighter-rouge">Commit message</code>를 이쁘고 명료하게 작성해보자.<br />
+안녕하세요</p>
 
 <h2 id="2-issue">2. Issue</h2>
 <hr />
@@ -28,7 +29,7 @@
 <span class="nv">$ </span><span class="nb">touch</span> ~/.gitmessage.txt
 </code></pre></div>    </div>
   </li>
-  <li>에디터를 통해 파일에 접근하여 팀이 정한 템플릿(4.Code 참고)을 그대로 넣고 저장한다.</li>
+  <li>에디터를 통해 파일에 접근하여 팀이 정한 템플릿(<strong>[목차 4] Code</strong> 참고)을 그대로 넣고 저장한다.</li>
   <li><code class="language-plaintext highlighter-rouge">commit.template</code>에 이 파일을 적용해준다.
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> commit.template ~/.gitmessage.txt
 </code></pre></div>    </div>
