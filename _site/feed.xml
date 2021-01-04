@@ -1,28 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sunio00000.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunio00000.github.io/" rel="alternate" type="text/html" /><updated>2020-12-30T23:36:45+09:00</updated><id>https://sunio00000.github.io/feed.xml</id><title type="html">Sunio Dev</title><subtitle>Make me better than i was before.</subtitle><author><name>Sunio</name></author><entry><title type="html">👨🏻‍💻[TIL] GIT Blog를 Local에서 미리 작성해 확인하기</title><link href="https://sunio00000.github.io/daily,/til/2020/12/30/TIL_template.html" rel="alternate" type="text/html" title="👨🏻‍💻[TIL] GIT Blog를 Local에서 미리 작성해 확인하기" /><published>2020-12-30T13:00:00+09:00</published><updated>2020-12-30T13:00:00+09:00</updated><id>https://sunio00000.github.io/daily,/til/2020/12/30/TIL_template</id><content type="html" xml:base="https://sunio00000.github.io/daily,/til/2020/12/30/TIL_template.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://sunio00000.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sunio00000.github.io/" rel="alternate" type="text/html" /><updated>2021-01-04T21:34:30+09:00</updated><id>https://sunio00000.github.io/feed.xml</id><title type="html">Sunio Dev</title><subtitle>Make me better than i was before.</subtitle><author><name>Sunio</name></author><entry><title type="html">👨🏻‍💻 Git Commit Template 아름답게 살자</title><link href="https://sunio00000.github.io/til/2021/01/04/TIL_template.html" rel="alternate" type="text/html" title="👨🏻‍💻 Git Commit Template 아름답게 살자" /><published>2021-01-04T13:00:00+09:00</published><updated>2021-01-04T13:00:00+09:00</updated><id>https://sunio00000.github.io/til/2021/01/04/TIL_template</id><content type="html" xml:base="https://sunio00000.github.io/til/2021/01/04/TIL_template.html">&lt;p&gt;깃을 통해 정보와 프로젝트, 제대로 공유하는 방법&lt;/p&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;1-prologue&quot;&gt;1. Prologue&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;우리는 서로를 이해시키는 무한한 소통의 과정을 거치며, 그 과정에 따라 웃으며 술 한잔 할 수 있는 팀워크인지 폭망해 카톡 숨김 목록을 차지하는 팀워크를 만나게 된다.&lt;br /&gt;
+코드를 Clean 하게 작성하는 것 이외로 우리는 개발을 하면서 협업을 하고 여러 의사결정을 하게 된다.  &lt;br /&gt;
+도구는 손짓 발짓이 될 수도 있고, 코드 그 자체가 되기도 한다. (뭐 이외에도 굉장하고 무궁무진한 방법들이 많긴하다. 🙄)&lt;br /&gt;
+우리는 효율적인 의사소통 도구의 활용이 우리에게 당연히도 최대의 이득을 가져다 줄 것이라 생각한다.&lt;br /&gt;
+하지만, 게을러서 포기하는 어떠한 (수많은) 것들이 있다..&lt;br /&gt;
+그 중에 버전관리 프로그램을 사용하며 작성하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Commit message&lt;/code&gt;를 이쁘고 명료하게 작성해보자.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-issue&quot;&gt;2. Issue&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;내가 무엇을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Commit&lt;/code&gt; 했었는지, 전혀 알 수가 없다. 이건 똥이다.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/103532788-363b8800-4ecf-11eb-8429-f39a62c129e8.png&quot; width=&quot;700&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3-resolve&quot;&gt;3. Resolve&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Commit template이 될 작성 파일을 생성한다.
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# window powershell&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;ni ~/.gitmessage.txt
+&lt;span class=&quot;c&quot;&gt;# linux shell&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;touch&lt;/span&gt; ~/.gitmessage.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;에디터를 통해 파일에 접근하여 팀이 정한 템플릿(&lt;strong&gt;[목차 4] Code&lt;/strong&gt; 참고)을 그대로 넣고 저장한다.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;commit.template&lt;/code&gt;에 이 파일을 적용해준다.
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git config &lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt; commit.template ~/.gitmessage.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;이 후의 깃 커밋 시에는 git commit (옵션 없이)를 치면 아래와 같은 화면이 나온다&lt;/li&gt;
+  &lt;li&gt;제목/본문/꼬릿말로 구성된 내용을 수정하고 커밋한다&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/103534155-b531c000-4ed1-11eb-8d29-1e2c0df910e0.png&quot; width=&quot;700&quot; height=&quot;500&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4-code&quot;&gt;4. Code&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;템플릿 예제.&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# &amp;lt;타입&amp;gt;: &amp;lt;제목&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;##### 제목은 최대 50 글자까지만 입력 ############## -&amp;gt; |&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# 본문은 위에 작성&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;######## 본문은 한 줄에 최대 72 글자까지만 입력 ########################### -&amp;gt; |&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 꼬릿말은 아래에 작성: ex) #이슈 번호&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# --- COMMIT END ---&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# &amp;lt;타입&amp;gt; 리스트&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   feat    : 기능 (새로운 기능)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   fix     : 버그 (버그 수정)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   refactor: 리팩토링&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   style   : 스타일 (코드 형식, 세미콜론 추가: 비즈니스 로직에 변경 없음)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   docs    : 문서 (문서 추가, 수정, 삭제)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   test    : 테스트 (테스트 코드 추가, 수정, 삭제: 비즈니스 로직에 변경 없음)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#   chore   : 기타 변경사항 (빌드 스크립트 수정 등)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ------------------&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#     제목 첫 글자를 대문자로&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#     제목은 명령문으로&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#     제목 끝에 마침표(.) 금지&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#     제목과 본문을 한 줄 띄워 분리하기&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#     본문은 &quot;어떻게&quot; 보다 &quot;무엇을&quot;, &quot;왜&quot;를 설명한다.&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#     본문에 여러줄의 메시지를 작성할 땐 &quot;-&quot;로 구분&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ------------------&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;5-post-script&quot;&gt;5. Post Script&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;일의 마무리를 보람차게 매듭짓도록 커밋메시지를 작성해보자.&lt;/p&gt;
+&lt;h2 id=&quot;6-reference&quot;&gt;6. Reference&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;Git Documentation 中 :: &lt;a href=&quot;!https://git-scm.com/book/ko/v2/Git%EB%A7%9E%EC%B6%A4-Git-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0&quot;&gt;8.1 Git맞춤-git-설정하기&lt;/a&gt;&lt;/p&gt;</content><author><name>Sunio</name></author><category term="TIL" /><summary type="html">깃을 통해 정보와 프로젝트, 제대로 공유하는 방법</summary></entry><entry><title type="html">💻 Git Blog를 Local Host에서 미리 보기</title><link href="https://sunio00000.github.io/til/2020/12/30/TIL_template.html" rel="alternate" type="text/html" title="💻 Git Blog를 Local Host에서 미리 보기" /><published>2020-12-30T13:00:00+09:00</published><updated>2020-12-30T13:00:00+09:00</updated><id>https://sunio00000.github.io/til/2020/12/30/TIL_template</id><content type="html" xml:base="https://sunio00000.github.io/til/2020/12/30/TIL_template.html">&lt;blockquote&gt;
   &lt;h5 id=&quot;내가-왜-git으로-블로그를-시작한걸까&quot;&gt;&lt;del&gt;내가 왜 git으로 블로그를 시작한걸까…&lt;/del&gt;&lt;/h5&gt;
 &lt;/blockquote&gt;
 
-&lt;h4 id=&quot;related&quot;&gt;[Related]&lt;/h4&gt;
+&lt;h1 id=&quot;tools&quot;&gt;Tools&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Github&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ruby&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Markdown&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Bootstrap&lt;/code&gt;&lt;/p&gt;
-&lt;h1 id=&quot;1-prologue&quot;&gt;1. Prologue&lt;/h1&gt;
+
+&lt;h2 id=&quot;1-prologue&quot;&gt;1. Prologue&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;p&gt;Github 블로그를 시작해서 고생받는 이야기, 진행 중 아주 일부… 
-(너희는 이런거 하지마라…😐)&lt;/p&gt;
-
-&lt;h1 id=&quot;2-issue&quot;&gt;2. Issue&lt;/h1&gt;
+&lt;p&gt;Github 블로그를 시작하기로 해버린 이상 하긴 해야하는데, 정말 하나부터 열까지 직접 구현을 해야한다.&lt;br /&gt;
+우습게도 정적 페이지로 깃 서버에서 돌아가기 때문에, 여느 블로그에나 있는 좋아요, 댓글과 같은 기능을 직접 구현할 수는 없어 여러 툴을 활용해야 한다. (최근, disqus를 통해서 댓글 기능을 추가하였다.)&lt;br /&gt;
+이러한 이유로 수정할 일도 많고 테스트 해보는 경우도 매우 잦은 블로그 시스템인데 문제는 내가 이걸 무식하게 글자하나 맘에 안들면 커밋하고, 폰트가 볼드체여서 커밋하고, 이미지 사이즈 바꾼다고 커밋을 하고 있다.&lt;br /&gt;
+그 덕에 깃허브의 잔디는 나에겐 발갛게 달아오른 얼굴 같은 것이 되었다. 😂&lt;br /&gt;
+(깃허브 블로그 시작하지마.. 아무튼 하지마…😐)&lt;/p&gt;
+&lt;h2 id=&quot;2-issue&quot;&gt;2. Issue&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;h5&gt;&lt;ol&gt;&lt;b&gt; &quot;Github 블로그의 Commit/Push 전에 로컬에서 수정해보자&quot; &lt;/b&gt;&lt;/ol&gt;&lt;/h5&gt;
-&lt;p&gt;깃허브 블로그는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Github&lt;/code&gt;에서 제공하는 서버 위에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt;의 텍스트 변환 엔진을 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTML&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;markdown&lt;/code&gt; Language를 미리 정의된 레이아웃에 따라서 표현하는 정적 웹사이트이다.&lt;/p&gt;
+&lt;p&gt;깃허브 블로그는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Github&lt;/code&gt;에서 제공하는 서버 위에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt;의 텍스트 변환 엔진을 통해 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTML&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;markdown&lt;/code&gt; Language를 미리 정의된 레이아웃에 따라서 표현하는 정적 웹사이트이다. 그 만큼 손이 많이 가기 때문에 이 것을 로컬 호스트에서 추가/변경 작업을 하고 싶다.&lt;/p&gt;
 
-&lt;p&gt;문제는 내가 이걸 무식하게 글자하나 맘에 안들면 커밋하고, 폰트가 볼드체여서 커밋하고, 이미지 사이즈 바꾼다고 커밋을 하고 있다. 그 덕에 내게 깃허브의 잔디는 내 부끄러움의 정도를 나타낸다고 볼 수 있겠다. 😂&lt;/p&gt;
+&lt;p&gt;나의 목표는 &lt;strong&gt;포스팅 작성 내용을 localhost에서 확인하고 수정해서 불필요한 커밋을 줄여보는 것이다.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;포스팅 작성 내용을 localhost에서 확인하고 수정해서 불필요한 커밋을 줄여보자.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;3-resolve&quot;&gt;3. Resolve&lt;/h1&gt;
+&lt;h2 id=&quot;3-resolve&quot;&gt;3. Resolve&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-  &lt;li&gt;일단, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ruby&lt;/code&gt;를 다운 받아야 한다. &lt;a href=&quot;https://www.ruby-lang.org/ko/downloads/&quot;&gt;Download&lt;/a&gt; 링크에서 자신의 운영체제에 맞는 프로그램을 설치한다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt;이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ruby&lt;/code&gt;로 만들어져 있기에 다운을 받아야 한다고 한다.&lt;/li&gt;
+  &lt;li&gt;일단, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ruby&lt;/code&gt;를 다운 받아야 한다. &lt;a href=&quot;https://www.ruby-lang.org/ko/downloads/&quot;&gt;&lt;em&gt;Download&lt;/em&gt;&lt;/a&gt; 링크에서 자신의 운영체제에 맞는 프로그램을 설치한다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt;이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ruby&lt;/code&gt;로 만들어져 있기에 다운을 받아야 한다고 한다.&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt; 외 몇 가지의 패키지를 설치해야한다.
     &lt;pre&gt;&lt;code class=&quot;language-Ruby&quot;&gt; &amp;gt; gem install jekyll
  &amp;gt; gem install minima
@@ -31,7 +107,7 @@
  &amp;gt; gem install tzinfo-data
 &lt;/code&gt;&lt;/pre&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt;을 실행한다. (이전에 레포 클론을 해야한다)
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt;을 실행한다. (이전에 jekyll이 포함된 repo를 클론하여야 하는 것을 잊지말자.)
     &lt;pre&gt;&lt;code class=&quot;language-Ruby&quot;&gt; &amp;gt; jekyll serve
 만약, 인코딩 에러가 발생하면,
  &amp;gt; chcp 65001
@@ -41,17 +117,18 @@
   &lt;li&gt;
     &lt;p&gt;이후 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost:4000&lt;/code&gt;으로 접속하면 로컬의 jekyll 블로그가 웹에 출력된다.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;만약 이런 아래와 같은 오류가 뜬다면, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;을 원
-하시는 대로 변경 해드려야 한다.&lt;/li&gt;
+  &lt;li&gt;만약 이런 아래와 같은 오류가 뜬다면, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;이 원
+하시는 모습으로 변경 해드려야 한다. (버전 번호를 변경해보자.)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p align=&quot;center&quot;&gt;
 &lt;img src=&quot;https://user-images.githubusercontent.com/26760693/103355846-b12d2900-4af2-11eb-9297-a8cc7f24bdeb.png&quot; width=&quot;500&quot; height=&quot;130&quot; /&gt; &lt;/p&gt;
-&lt;h1 id=&quot;4-code&quot;&gt;4. Code&lt;/h1&gt;
+
+&lt;h2 id=&quot;4-code&quot;&gt;4. Code&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;없음 -&lt;/p&gt;
-&lt;h1 id=&quot;5-post-script&quot;&gt;5. Post Script&lt;/h1&gt;
+&lt;h2 id=&quot;5-post-script&quot;&gt;5. Post Script&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;del&gt;포스팅 한번 하기 더럽게 힘드네 진짜&lt;/del&gt;&lt;/p&gt;</content><author><name>Sunio</name></author><category term="daily," /><category term="TIL" /><summary type="html">내가 왜 git으로 블로그를 시작한걸까…</summary></entry><entry><title type="html">🎲 SW JUNGLE, 급하게 돌아보기</title><link href="https://sunio00000.github.io/daily,/essay/2020/12/14/jungleessay.html" rel="alternate" type="text/html" title="🎲 SW JUNGLE, 급하게 돌아보기" /><published>2020-12-14T06:14:00+09:00</published><updated>2020-12-14T06:14:00+09:00</updated><id>https://sunio00000.github.io/daily,/essay/2020/12/14/jungleessay</id><content type="html" xml:base="https://sunio00000.github.io/daily,/essay/2020/12/14/jungleessay.html">&lt;h2 id=&quot;loc-정글-stat-정신-나가는-중&quot;&gt;{‘loc’: ‘정글’, ‘stat’: ‘정신 나가는 중..’}&lt;/h2&gt;
+&lt;p&gt;&lt;del&gt;포스팅 한번 하기 더럽게 힘드네 진짜&lt;/del&gt;&lt;/p&gt;</content><author><name>Sunio</name></author><category term="TIL" /><summary type="html">내가 왜 git으로 블로그를 시작한걸까…</summary></entry><entry><title type="html">🎲 SW JUNGLE, 급하게 돌아보기</title><link href="https://sunio00000.github.io/daily,/essay/2020/12/14/jungleessay.html" rel="alternate" type="text/html" title="🎲 SW JUNGLE, 급하게 돌아보기" /><published>2020-12-14T06:14:00+09:00</published><updated>2020-12-14T06:14:00+09:00</updated><id>https://sunio00000.github.io/daily,/essay/2020/12/14/jungleessay</id><content type="html" xml:base="https://sunio00000.github.io/daily,/essay/2020/12/14/jungleessay.html">&lt;h2 id=&quot;loc-정글-stat-정신-나가는-중&quot;&gt;{‘loc’: ‘정글’, ‘stat’: ‘정신 나가는 중..’}&lt;/h2&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;em&gt;찬찬히 나를 돌아보라고 하시지만, 그럴 여유 없다. 급하게 돌아보자&lt;/em&gt;&lt;/p&gt;
@@ -64,28 +141,20 @@
 
 &lt;h1 id=&quot;나라는-사람은&quot;&gt;&lt;b&gt;나라는 사람은…&lt;/b&gt;&lt;/h1&gt;
 &lt;hr /&gt;
-&lt;h2 id=&quot;방황의-역사&quot;&gt;방황의 역사&lt;/h2&gt;
+&lt;h2 id=&quot;방황의-시간들&quot;&gt;방황의 시간들&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;일단, 나는 1달이 지나면 앞자리가 ‘3’으로 바뀌는 아저씨이다.&lt;br /&gt;어쩌다보니 시간이 흘러서 그렇게 되버렸다. (내 잘못은 아닌듯 함) 🙂 &lt;br /&gt;시간을 돌이켜보면 미래에 대해 고민한건 대학을 졸업한 시점부터 였던 것 같다. &lt;del&gt;이런 병x이 없다.&lt;/del&gt;&lt;br /&gt; 적성에 맞는다는 생각에 &lt;b&gt;사람을 가르치는 직업&lt;/b&gt;을 시작으로 서울대 수의과의 Lab실에서 1년 넘게 &lt;b&gt;어플리케이션을 개발&lt;/b&gt;하며 사회생활을 경험해왔다.&lt;br /&gt;뭐 어느 Lab실이 그렇듯, 당연히도 개발만 하지는 못했다.&lt;br /&gt;&lt;br /&gt;
-    &lt;h5 id=&quot;이러쿵-저러쿵해서-지금은-정글을-만나게-되었다&quot;&gt;&lt;center&gt;🎉이러쿵 저러쿵해서 지금은 정글을 만나게 되었다.🎉&lt;/center&gt;&lt;/h5&gt;
-    &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;일단, 나는 1달이 지나면 앞자리가 ‘3’으로 바뀌는 아저씨이다.&lt;br /&gt;어쩌다보니 시간이 흘러서 그렇게 되버렸다. (내 잘못은 아닌듯 함) 🙂 &lt;br /&gt;시간을 돌이켜보면 미래에 대해 고민한건 대학을 졸업한 시점부터 였던 것 같다. &lt;del&gt;이런 병x이 없다.&lt;/del&gt;&lt;br /&gt; 적성에 맞는다는 생각에 &lt;b&gt;사람을 가르치는 직업&lt;/b&gt;을 시작으로 서울대 수의과의 Lab실에서 1년 넘게 &lt;b&gt;어플리케이션을 개발&lt;/b&gt;하며 사회생활을 경험해왔다.&lt;br /&gt;뭐 어느 Lab실이 그렇듯, 당연히도 개발만 하지는 못했다.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h5 id=&quot;이러쿵-저러쿵해서-지금은-정글을-만나게-되었다&quot;&gt;&lt;center&gt;🎉이러쿵 저러쿵해서 지금은 정글을 만나게 되었다.🎉&lt;/center&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;정글에-오고자-한-목적&quot;&gt;정글에 오고자 한 목적&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;나는 개발은 해봤지만, 개발자는 아니였다.&lt;br /&gt;누군가가 나에게 이런 말을 해준적이 있었다.&lt;/p&gt;
+&lt;p&gt;나는 개발은 해봤지만, 개발자는 아니였다.&lt;br /&gt;누군가가 나에게 이런 말을 해준적이 있었다.&lt;/p&gt;
 
-    &lt;blockquote&gt;
-      &lt;p&gt;&lt;em&gt;돈이 없어도 살 수 있지만, 비굴해질 일이 생긴다.&lt;/em&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;물론 돈 이야기는 아니다.&lt;br /&gt;이전 직장에서 겉핥기 식으로 개발을 하며 깨달은 것은 능력도 없이 창피하게 ‘개발자’라는 타이틀로 일을 했다는 것이다. &lt;br /&gt;그렇기 때문에, 개발보다 다른 연구과제를 더 많이 하게 되어도 자존심이 안상했고,&lt;br /&gt; 만약 내가 개발이 하고 싶으면 ‘할 줄도 모른다’는 비아냥을 받으며 빌어야하는 위치였다.&lt;br /&gt;나이가 들어 돈이 없는 사람처럼 말이다.&lt;br /&gt; 여기서 그 &lt;b&gt;‘비굴함’&lt;/b&gt;이 없는 개발자가 될 기회를 얻은 것 같아 정말 기쁘고 영광스럽게 생각한다 😌&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;돈이 없어도 살 수 있지만, 비굴해질 일이 생긴다.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;물론 돈 이야기는 아니다.&lt;br /&gt;이전 직장에서 겉핥기 식으로 개발을 하며 깨달은 것은 능력도 없이 창피하게 ‘개발자’라는 타이틀로 일을 했다는 것이다. &lt;br /&gt;그렇기 때문에, 개발보다 다른 연구과제를 더 많이 하게 되어도 자존심이 안상했고,&lt;br /&gt; 만약 내가 개발이 하고 싶으면 ‘할 줄도 모른다’는 비아냥을 받으며 빌어야하는 위치였다.&lt;br /&gt;나이가 들어 돈이 없는 사람처럼 말이다.&lt;br /&gt; 여기서 그 &lt;b&gt;‘비굴함’&lt;/b&gt;이 없는 개발자가 될 기회를 얻은 것 같아 정말 기쁘고 영광스럽게 생각한다 😌&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -93,42 +162,31 @@
 &lt;hr /&gt;
 &lt;h2 id=&quot;함께-개발한다는-것&quot;&gt;함께 개발한다는 것&lt;/h2&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;0주차는 해커톤마냥 웹프로젝트를 팀으로 하는것이였다.&lt;br /&gt;대부분이 비전공자이고 개발에 깊은 조예가 없었기 때문에 다짜고짜 팀프로젝트는 당황의 연속이였다.&lt;br /&gt;‘웹 개발이라고는 입교시험 때 배운게 전분데 뭘 어떻게 하라는거지?’ 우리는 혼란에 휩싸였다.&lt;br /&gt;
-    &lt;blockquote&gt;
-      &lt;p&gt;저 Pull Request 처음 해봐요… fork는 뭐에요…😂&lt;/p&gt;
-    &lt;/blockquote&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;0주차는 해커톤마냥 웹프로젝트를 팀으로 하는것이였다.&lt;br /&gt;대부분이 비전공자이고 개발에 깊은 조예가 없었기 때문에 다짜고짜 팀프로젝트는 당황의 연속이였다.&lt;br /&gt;‘웹 개발이라고는 입교시험 때 배운게 전분데 뭘 어떻게 하라는거지?’ 우리는 혼란에 휩싸였다.&lt;br /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;저 Pull Request 처음 해봐요… fork는 뭐에요…😂&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p align=&quot;center&quot;&gt;
-&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/102012066-a6049a00-3d8b-11eb-86c2-56f06e1ec3b1.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt; &lt;/p&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/102012066-a6049a00-3d8b-11eb-86c2-56f06e1ec3b1.png&quot; width=&quot;700&quot; height=&quot;300&quot; /&gt; &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;pull&quot; /&gt;
-&lt;em&gt;31 Closed pull request..&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;첫날 몇 시간동안 짧게 배운 github를 이용해서 협업하는 방법에 대해 고민하고, 바로 실전에 적용해서 프로젝트를 제작하였다.&lt;br /&gt;포크한 개인 레포에서 생성한 기관 레포에 풀리퀘를 보내고 머지하고 컨플릭트에러 나고, 다시 푸쉬하고 풀리퀘하…&lt;br /&gt;그렇게 3박 4일을 어제 처음만난 팀원들과 함께 처음보는 프레임워크와 개발언어, 협업툴을 이용하는 과정을 거쳐, 우리가 개발한 웹이 서버에서 돌아가는 모습을 보니 너무 뿌듯했다.&lt;br /&gt;동시에, 세상에 그렇게 많은 웹페이지들이 어떻게 돌아가는건지 경외감을 느끼며 0주차가 지나갔다.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;em&gt;31 Closed pull request..&lt;/em&gt;
+첫날 몇 시간동안 짧게 배운 github를 이용해서 협업하는 방법에 대해 고민하고, 바로 실전에 적용해서 프로젝트를 제작하였다.&lt;br /&gt;포크한 개인 레포에서 생성한 기관 레포에 풀리퀘를 보내고 머지하고 컨플릭트에러 나고, 다시 푸쉬하고 풀리퀘하…&lt;br /&gt;그렇게 3박 4일을 어제 처음만난 팀원들과 함께 처음보는 프레임워크와 개발언어, 협업툴을 이용하는 과정을 거쳐, 우리가 개발한 웹이 서버에서 돌아가는 모습을 보니 너무 뿌듯했다.&lt;br /&gt;동시에, 세상에 그렇게 많은 웹페이지들이 어떻게 돌아가는건지 경외감을 느끼며 0주차가 지나갔다.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;힘들겠다-아니-이미-힘들어-쉴틈없이-이어지는-week01&quot;&gt;힘들겠다… 아니 이미 힘들어. 쉴틈없이 이어지는 WEEK01.&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;1단, 1주차 커리큘럼을 본 모두는 그렇게 생각했다… ‘ 오, 쉽네 ‘&lt;br /&gt;아니다 겁나 어렵다. 큰일이 나버린 것이다. &lt;br /&gt;생각처럼 되지가 않는다. 이상은 사이드프로젝트인데, 현실은 재귀함수다. &lt;br /&gt;이번 주차가 제일 쉽다는데 우린 &lt;del&gt;x됐다.&lt;/del&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;1단, 1주차 커리큘럼을 본 모두는 그렇게 생각했다… ‘ 오, 쉽네 ‘&lt;br /&gt;아니다 겁나 어렵다. 큰일이 나버린 것이다. &lt;br /&gt;생각처럼 되지가 않는다. 이상은 사이드프로젝트인데, 현실은 재귀함수다. &lt;br /&gt;이번 주차가 제일 쉽다는데 우린 &lt;del&gt;x됐다.&lt;/del&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;정글의-끝에-뭐가-있을까&quot;&gt;&lt;b&gt;정글의 끝에 뭐가 있을까&lt;/b&gt;&lt;/h1&gt;
 &lt;hr /&gt;
 &lt;h2 id=&quot;자부심-넘치는-개발자-&quot;&gt;자부심 넘치는 개발자 👨‍💻&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;개발 근육이 튼튼한 개발자가 되어 있기를 바라고,&lt;br /&gt;내가 모르는 것이 무엇인지 알고, 필요한 것을 스스로 찾는 지혜로운 개발자,&lt;br /&gt; 나를 필요로 하는 곳에서, 그들을 만족 시킬 수 있는 기술과 능력을 가진 기술자가 되어 정글에서 당당하게 졸업하여 나가게 될거야.
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;개발 근육이 튼튼한 개발자가 되어 있기를 바라고,&lt;br /&gt;내가 모르는 것이 무엇인지 알고, 필요한 것을 스스로 찾는 지혜로운 개발자,&lt;br /&gt; 나를 필요로 하는 곳에서, 그들을 만족 시킬 수 있는 기술과 능력을 가진 기술자가 되어 정글에서 당당하게 졸업하여 나가게 될거야.
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;제가-해보고-싶어요-️&quot;&gt;제가 해보고 싶어요 🙋‍♂️&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;꼭 필요한 담백한 질문을 하는 사람,&lt;br /&gt;문제를 해결하는데 가장 먼저 앞서서 나서는 사람,&lt;br /&gt;오지랖 넘치는 지식 자랑보다 헤쳐나가는 지혜를 가르쳐줄 수 있는 사람&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;꼭 필요한 담백한 질문을 하는 사람,&lt;br /&gt;문제를 해결하는데 가장 먼저 앞서서 나서는 사람,&lt;br /&gt;오지랖 넘치는 지식 자랑보다 헤쳐나가는 지혜를 가르쳐줄 수 있는 사람&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -136,22 +194,16 @@
 &lt;hr /&gt;
 &lt;p&gt;&lt;b&gt;  1. 일단 하기&lt;/b&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;무엇이든 살이되고 뼈가된다는 믿음을 가지고&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;무엇이든 살이되고 뼈가된다는 믿음을 가지고&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;  2. 자부심 가지기&lt;/b&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;나라고 못할게 뭐가 있냐.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;나라고 못할게 뭐가 있냐.&lt;/p&gt;
 
 &lt;p&gt;&lt;b&gt;  3. 이타적 이기심 갖기&lt;/b&gt;&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;내가 잘되야 내 주변이 잘된다.
-&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Sunio</name></author><category term="daily," /><category term="essay" /><summary type="html">{‘loc’: ‘정글’, ‘stat’: ‘정신 나가는 중..’}</summary></entry><entry><title type="html">📚 개발? 새발 블로그</title><link href="https://sunio00000.github.io/daily/2020/12/09/daily.html" rel="alternate" type="text/html" title="📚 개발? 새발 블로그" /><published>2020-12-09T21:26:28+09:00</published><updated>2020-12-09T21:26:28+09:00</updated><id>https://sunio00000.github.io/daily/2020/12/09/daily</id><content type="html" xml:base="https://sunio00000.github.io/daily/2020/12/09/daily.html">&lt;p&gt;글을 겁나 못쓰는 사람의 개발 일지.&lt;/p&gt;
+&lt;p&gt;내가 잘되야 내 주변이 잘된다.
+&lt;br /&gt;&lt;/p&gt;</content><author><name>Sunio</name></author><category term="daily," /><category term="essay" /><summary type="html">{‘loc’: ‘정글’, ‘stat’: ‘정신 나가는 중..’}</summary></entry><entry><title type="html">📚 개발? 새발 블로그</title><link href="https://sunio00000.github.io/daily/2020/12/09/daily.html" rel="alternate" type="text/html" title="📚 개발? 새발 블로그" /><published>2020-12-09T21:26:28+09:00</published><updated>2020-12-09T21:26:28+09:00</updated><id>https://sunio00000.github.io/daily/2020/12/09/daily</id><content type="html" xml:base="https://sunio00000.github.io/daily/2020/12/09/daily.html">&lt;p&gt;글을 겁나 못쓰는 사람의 개발 일지.&lt;/p&gt;
 
 &lt;p&gt;개발, 생각, 일상의 내용을 기록하는 창구로 사용하게 될 것 같다.&lt;/p&gt;
 

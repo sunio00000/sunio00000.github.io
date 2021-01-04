@@ -113,21 +113,31 @@ footer .copyright { font-size: 14px; margin-bottom: 0; text-align: center; }
 
 @font-face { font-family: 'NEXON Lv1 Gothic OTF Bold'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff"); font-weight: normal; font-style: normal; }
 
+@font-face { font-family: 'NEXON Lv1 Gothic OTF'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff"); font-weight: normal; font-style: normal; }
+
 @font-face { font-family: 'NEXON Lv1 Gothic OTF Light'; src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff") format("woff"); font-weight: normal; font-style: normal; }
 
 /* Style Blog Font */
-h1, h2 { font-family: 'NEXON Lv1 Gothic OTF Bold'; }
+b { font-family: 'NEXON Lv1 Gothic OTF Bold'; }
 
-h3, h4, h5, h6, p, pre, ul, ol, dl { font-family: 'NEXON Lv1 Gothic OTF Light'; }
+h1 { font-family: 'NEXON Lv1 Gothic OTF Bold'; }
 
-pre { margin: 5px,5px,5px,5px; background-color: whitesmoke; color: steelblue; }
+h2 { font-family: 'NEXON Lv1 Gothic OTF'; }
 
-li { margin-bottom: 20px; }
+h3, h4, h5, h6, p, pre, ol, dl { font-family: 'NEXON Lv1 Gothic OTF'; }
 
-ul { font-family: 'NEXON Lv1 Gothic OTF Light'; font-size: 30px; }
+p { font-size: 20px; padding-bottom: 15px; }
 
-br { margin: 0; }
+pre { font-family: 'NEXON Lv1 Gothic OTF'; margin: 5px,5px,5px,5px; background-color: whitesmoke; color: steelblue; }
 
-blockquote, figure { margin-bottom: 15px; font-family: 'Jua', sans-serif; }
+br { margin-bottom: 15px; }
+
+ul, ol { font-family: 'NEXON Lv1 Gothic OTF'; font-size: 20px; }
+
+li { margin-bottom: 10px; }
+
+br { margin: 10px; }
+
+blockquote, figure { font-family: 'NEXON Lv1 Gothic OTF'; }
 
 /*# sourceMappingURL=main.css.map */
