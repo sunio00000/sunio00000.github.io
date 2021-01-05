@@ -17,7 +17,16 @@ layout: default
             {% if page.subtitle %}
             <h2 class="subheading">{{ page.subtitle }}</h2>
             {% endif %}
-            <span class="meta">Posted by
+            {% if page.tags %}
+              {% for tag in page.tags %}
+                {% if site.data.tags contains tag %}
+                  <span class="tag btn btn-secondary selected" data-tag="{{tag}}">
+                    {{ site.data.format[tag] }}
+                  </span>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+            <span class="meta" style="padding-top:20px">Posted by
               <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
               on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
               content=page.content %}
@@ -33,7 +42,7 @@ layout: default
       <div class="col-lg-8 col-md-10 mx-auto">
 
         {{ content }}
-
+        
         <hr>
         {% if page.comments %} • <a href="https://sunio00000.github.io/{{ page.url }}#disqus_thread">0 Comments</a>{% endif %}
         {% include disqus.html %}

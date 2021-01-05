@@ -38,13 +38,71 @@ p {
     font-size: 20px;
     padding-bottom: 15px;
 }
-pre {
-    font-family: 'NEXON Lv1 Gothic OTF';
-    margin: 5px,5px,5px,5px;
-    background-color: whitesmoke;
-    color : steelblue
-
+.hidden {
+    display:none;
 }
+.selected {
+    background-color: #008eaa;
+    color: white
+}
+
+.btn-secondary{
+    border-radius: 10px;
+    border-color: transparent;
+    padding: 10px;
+}
+
+.btn-light{
+    border-radius: 10px;
+    padding: 10px;
+}
+
+pre, code {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #fcfcff;
+    margin: 0;
+}
+
+pre {
+overflow-y: scroll;
+word-wrap: normal;
+}
+
+figure {
+margin: 0;
+padding: 0;
+}
+
+.highlight {
+margin: 1em 0;
+}
+
+pre.highlight {
+padding: 1em;
+}
+
+.lineno {
+padding: .5em;
+}
+
+.gutter, .lineno {
+background-color: #CAEBF2;
+}
+
+td.code {
+padding: 1em .5em;
+}
+
+code {
+  border: none;
+  font-size: 18px;
+  font-style: italic;
+  font-family: 'NEXON Lv1 Gothic OTF Light';
+  background-color: transparent;
+  padding: 5px;
+  margin: 10px 10px 10px;
+}
+
 br {
     margin-bottom: 15px;
 }

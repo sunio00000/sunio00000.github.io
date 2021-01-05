@@ -1,4 +1,4 @@
-I"@<blockquote>
+I"�<blockquote>
   <h5 id="내가-왜-git으로-블로그를-시작한걸까"><del>내가 왜 git으로 블로그를 시작한걸까…</del></h5>
 </blockquote>
 
@@ -24,19 +24,19 @@
 <ol>
   <li>일단, <code class="language-plaintext highlighter-rouge">Ruby</code>를 다운 받아야 한다. <a href="https://www.ruby-lang.org/ko/downloads/"><em>Download</em></a> 링크에서 자신의 운영체제에 맞는 프로그램을 설치한다. <code class="language-plaintext highlighter-rouge">Jekyll</code>이 <code class="language-plaintext highlighter-rouge">Ruby</code>로 만들어져 있기에 다운을 받아야 한다고 한다.</li>
   <li><code class="language-plaintext highlighter-rouge">Jekyll</code> 외 몇 가지의 패키지를 설치해야한다.
-    <pre><code class="language-Ruby"> &gt; gem install jekyll
- &gt; gem install minima
- &gt; gem install bundler
- &gt; gem install jekyll-feed
- &gt; gem install tzinfo-data
-</code></pre>
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">&gt;</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span>
+ <span class="o">&gt;</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">minima</span>
+ <span class="o">&gt;</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">bundler</span>
+ <span class="o">&gt;</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span><span class="o">-</span><span class="n">feed</span>
+ <span class="o">&gt;</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">tzinfo</span><span class="o">-</span><span class="n">data</span>
+</code></pre></div>    </div>
   </li>
   <li><code class="language-plaintext highlighter-rouge">Jekyll</code>을 실행한다. (이전에 jekyll이 포함된 repo를 클론하여야 하는 것을 잊지말자.)
-    <pre><code class="language-Ruby"> &gt; jekyll serve
-만약, 인코딩 에러가 발생하면,
- &gt; chcp 65001
-입력하고 다시 지킬을 실행한다.
-</code></pre>
+    <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="o">&gt;</span> <span class="n">jekyll</span> <span class="n">serve</span>
+<span class="c1">#만약, 인코딩 에러가 발생하면,</span>
+ <span class="o">&gt;</span> <span class="n">chcp</span> <span class="mi">65001</span>
+<span class="c1">#입력하고 다시 지킬을 실행한다.</span>
+</code></pre></div>    </div>
   </li>
   <li>
     <p>이후 <code class="language-plaintext highlighter-rouge">localhost:4000</code>으로 접속하면 로컬의 jekyll 블로그가 웹에 출력된다.</p>

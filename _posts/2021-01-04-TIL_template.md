@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "👨🏻‍💻 Git Commit Template 아름답게 살자" # 
+tags: [all, til, git, mistake]
+title: "👨🏻‍💻 Git 커밋 Template 아름답게 전달하자" # 
 date: 2021-01-04 00:00:00 -0400
 categories: TIL
 background: '/img/bg-post.jpg'
@@ -30,20 +31,20 @@ comments: true
 ---
 
 1. Commit template이 될 작성 파일을 생성한다.
-```bash
-# window powershell
+```shell
+# windows powershell
 $ ni ~/.gitmessage.txt
 # linux shell
 $ touch ~/.gitmessage.txt
 ```
 2. 에디터를 통해 파일에 접근하여 팀이 정한 템플릿(**[목차 4] Code** 참고)을 그대로 넣고 저장한다.  
 3. `commit.template`에 이 파일을 적용해준다.
-```bash
+```shell
 git config --global commit.template ~/.gitmessage.txt
 ```
 4. 이 후의 깃 커밋 시에는 git commit (옵션 없이)를 치면 아래와 같은 화면이 나온다  
 5. 제목/본문/꼬릿말로 구성된 내용을 수정하고 커밋한다
-<p align='center'><img src="https://user-images.githubusercontent.com/26760693/103534155-b531c000-4ed1-11eb-8d29-1e2c0df910e0.png" width="700" height="500"></p>  
+<p align='center'><img src="https://user-images.githubusercontent.com/26760693/103534155-b531c000-4ed1-11eb-8d29-1e2c0df910e0.png" width="650" height="500"></p>  
 
 
  

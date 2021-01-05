@@ -1,43 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://sunio00000.github.io/daily/2020/12/09/daily.html</loc>
-<lastmod>2020-12-09T21:26:28+09:00</lastmod>
-</url>
-<url>
-<loc>https://sunio00000.github.io/daily,/essay/2020/12/14/jungleessay.html</loc>
-<lastmod>2020-12-14T06:14:00+09:00</lastmod>
-</url>
-<url>
-<loc>https://sunio00000.github.io/til/2020/12/30/TIL_template.html</loc>
-<lastmod>2020-12-30T13:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>https://sunio00000.github.io/til/2021/01/04/TIL_template.html</loc>
-<lastmod>2021-01-04T13:00:00+09:00</lastmod>
-</url>
-<url>
-<loc>https://sunio00000.github.io/posts/TIL_template.html</loc>
-</url>
-<url>
-<loc>https://sunio00000.github.io/about.html</loc>
-</url>
-<url>
-<loc>https://sunio00000.github.io/contact.html</loc>
-</url>
-<url>
-<loc>https://sunio00000.github.io/posts/daily_template.html</loc>
-</url>
-<url>
-<loc>https://sunio00000.github.io/posts/dev_template.html</loc>
-</url>
-<url>
-<loc>https://sunio00000.github.io/posts/</loc>
-</url>
-<url>
-<loc>https://sunio00000.github.io/</loc>
-</url>
-<url>
-<loc>https://sunio00000.github.io/posts/review_template%20copy.html</loc>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <url>
+        <loc>https://sunio00000.github.io/til/2021/01/04/TIL_template.html</loc>
+    </url>
+    
+    <url>
+        <loc>https://sunio00000.github.io/til/2020/12/30/TIL_template.html</loc>
+    </url>
+    
+    <url>
+        <loc>https://sunio00000.github.io/daily,/essay/2020/12/14/jungleessay.html</loc>
+    </url>
+    
+    <url>
+        <loc>https://sunio00000.github.io/daily/2020/12/09/daily.html</loc>
+    </url>
+    
+
+    
+    
+    
+    <url>
+        <loc>https://sunio00000.github.io/posts/TIL_template.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://sunio00000.github.io/about.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://sunio00000.github.io/contact.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://sunio00000.github.io/posts/daily_template.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://sunio00000.github.io/posts/dev_template.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://sunio00000.github.io/posts/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://sunio00000.github.io/</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>https://sunio00000.github.io/posts/review_template%20copy.html</loc>
+    </url>
+    
+    
+    
+    
+    
+    
+    
 </urlset>

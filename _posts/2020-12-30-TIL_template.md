@@ -1,5 +1,6 @@
 ---
 layout: post
+tags: [all, til, git, jekyll, ruby, blog]
 title: "💻 Git Blog를 Local Host에서 미리 보기" # 
 date: 2020-12-30 00:00:00 -0400
 categories: TIL
@@ -30,7 +31,7 @@ Github 블로그를 시작하기로 해버린 이상 하긴 해야하는데, 정
 ---
 1. 일단, `Ruby`를 다운 받아야 한다. [_Download_](https://www.ruby-lang.org/ko/downloads/) 링크에서 자신의 운영체제에 맞는 프로그램을 설치한다. `Jekyll`이 `Ruby`로 만들어져 있기에 다운을 받아야 한다고 한다.
 2. `Jekyll` 외 몇 가지의 패키지를 설치해야한다.  
-```Ruby
+```ruby
  > gem install jekyll
  > gem install minima
  > gem install bundler
@@ -38,11 +39,11 @@ Github 블로그를 시작하기로 해버린 이상 하긴 해야하는데, 정
  > gem install tzinfo-data
  ```
 3. `Jekyll`을 실행한다. (이전에 jekyll이 포함된 repo를 클론하여야 하는 것을 잊지말자.)  
-```Ruby
+```ruby
  > jekyll serve
-만약, 인코딩 에러가 발생하면,
+#만약, 인코딩 에러가 발생하면,
  > chcp 65001
-입력하고 다시 지킬을 실행한다.
+#입력하고 다시 지킬을 실행한다.
 ```
 4. 이후 `localhost:4000`으로 접속하면 로컬의 jekyll 블로그가 웹에 출력된다.
 

@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
-
+  <link rel="stylesheet" href="/assets/css/syntax.css">
   <link rel="stylesheet" href="/assets/main.css">
   <link rel="canonical" href="https://sunio00000.github.io/">
   <link rel="alternate" type="application/rss+xml" title="Sunio Dev" href="/feed.xml">
@@ -74,7 +74,28 @@
 </nav>
 
 
-  <!-- Page Header -->
+  <script>
+  function onClickTag() {
+    $("[data-tag]").click((e) => {
+    currentTag = e.target.dataset.tag;
+    filterByTagName(currentTag);
+    })
+  }
+  
+  function filterByTagName(tagName) {
+    console.log("call "+tagName)
+    $('.hidden').removeClass('hidden');
+    $('.post-wrapper').each((index, elem) => {
+      if (!elem.hasAttribute(`data-${tagName}`)) {
+        $(elem).addClass('hidden');
+      }
+    });
+    $(`.tag`).removeClass('selected');
+    $(`.tag[data-tag=${tagName}]`).addClass('selected');
+  }
+
+</script>
+<!-- Page Header -->
 
 <header class="masthead" style="background-image: url('/img/bg-index.jpg')">
   
@@ -94,6 +115,52 @@
   </header>
 
 <div class="container">
+    
+      <span class="tag btn btn-secondary" onClick="onClickTag()" data-tag="all">
+        ALL
+      </span>
+    
+      <span class="tag btn btn-secondary" onClick="onClickTag()" data-tag="javascript">
+        Javascript
+      </span>
+    
+      <span class="tag btn btn-secondary" onClick="onClickTag()" data-tag="frontend">
+        FrontEnd
+      </span>
+    
+      <span class="tag btn btn-secondary" onClick="onClickTag()" data-tag="blog">
+        BLOG
+      </span>
+    
+      <span class="tag btn btn-secondary" onClick="onClickTag()" data-tag="jekyll">
+        Jekyll
+      </span>
+    
+      <span class="tag btn btn-secondary" onClick="onClickTag()" data-tag="ruby">
+        Ruby
+      </span>
+    
+      <span class="tag btn btn-secondary" onClick="onClickTag()" data-tag="git">
+        GIT
+      </span>
+    
+      <span class="tag btn btn-secondary" onClick="onClickTag()" data-tag="til">
+        TIL
+      </span>
+    
+      <span class="tag btn btn-secondary" onClick="onClickTag()" data-tag="daily">
+        Daily
+      </span>
+    
+      <span class="tag btn btn-secondary" onClick="onClickTag()" data-tag="algorithm">
+        Algorithm
+      </span>
+    
+      <span class="tag btn btn-secondary" onClick="onClickTag()" data-tag="ps">
+        Problem Solving
+      </span>
+    
+    <hr>
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
 
@@ -101,105 +168,192 @@
 
         <!-- Home Post List -->
         
-
-        <article class="post-preview">
-          <a href="/til/2021/01/04/TIL_template.html">
-            <h2 class="post-title">👨🏻‍💻 Git Commit Template 아름답게 살자</h2>
+        <div class="post-wrapper"
             
-            <h3 class="post-subtitle">깃을 통해 정보와 프로젝트, 제대로 공유하는 방법
+              
+                data-all
+              
+                data-til
+              
+                data-git
+              
+                data-mistake
+              
+            >
+          <article class="post-preview">
+            <a href="/til/2021/01/04/TIL_template.html">
+              <h2 class="post-title">👨🏻‍💻 Git 커밋 Template 아름답게 전달하자</h2>
+              
+              <h3 class="post-subtitle">깃을 통해 정보와 프로젝트, 제대로 공유하는 방법
 </h3>
+              
+
+            </a>
             
-          </a>
-          <p class="post-meta">Posted by
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="all">
+                ALL
+              </span>
             
-            Sunio
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="til">
+                TIL
+              </span>
             
-            on
-            January 04, 2021 &middot; <span class="reading-time" title="Estimated read time">
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="git">
+                GIT
+              </span>
+            
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="mistake">
+                
+              </span>
+            
+            <p class="post-meta" style="text-align:right; padding-top:20px; padding-bottom:0px">Posted on
+              January 04, 2021 &middot; <span class="reading-time" title="Estimated read time">
   
    3 mins  read </span>
     
-          </p>
-        </article>
-
-        <hr>
+            </p>
+          </article>
+          <hr>
+        </div>
 
         
-
-        <article class="post-preview">
-          <a href="/til/2020/12/30/TIL_template.html">
-            <h2 class="post-title">💻 Git Blog를 Local Host에서 미리 보기</h2>
+        <div class="post-wrapper"
             
-            <h3 class="post-subtitle">
+              
+                data-all
+              
+                data-til
+              
+                data-git
+              
+                data-jekyll
+              
+                data-ruby
+              
+                data-blog
+              
+            >
+          <article class="post-preview">
+            <a href="/til/2020/12/30/TIL_template.html">
+              <h2 class="post-title">💻 Git Blog를 Local Host에서 미리 보기</h2>
+              
+              <h3 class="post-subtitle">
   내가 왜 git으로 블로그를 시작한걸까…
 
 </h3>
+              
+
+            </a>
             
-          </a>
-          <p class="post-meta">Posted by
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="all">
+                ALL
+              </span>
             
-            Sunio
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="til">
+                TIL
+              </span>
             
-            on
-            December 30, 2020 &middot; <span class="reading-time" title="Estimated read time">
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="git">
+                GIT
+              </span>
+            
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="jekyll">
+                Jekyll
+              </span>
+            
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="ruby">
+                Ruby
+              </span>
+            
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="blog">
+                BLOG
+              </span>
+            
+            <p class="post-meta" style="text-align:right; padding-top:20px; padding-bottom:0px">Posted on
+              December 30, 2020 &middot; <span class="reading-time" title="Estimated read time">
   
    2 mins  read </span>
     
-          </p>
-        </article>
-
-        <hr>
+            </p>
+          </article>
+          <hr>
+        </div>
 
         
-
-        <article class="post-preview">
-          <a href="/daily,/essay/2020/12/14/jungleessay.html">
-            <h2 class="post-title">🎲 SW JUNGLE, 급하게 돌아보기</h2>
+        <div class="post-wrapper"
             
-            <h3 class="post-subtitle">{‘loc’: ‘정글’, ‘stat’: ‘정신 나가는 중..’}
+              
+                data-all
+              
+                data-daily
+              
+            >
+          <article class="post-preview">
+            <a href="/daily,/essay/2020/12/14/jungleessay.html">
+              <h2 class="post-title">🎲 SW JUNGLE, 급하게 돌아보기</h2>
+              
+              <h3 class="post-subtitle">{‘loc’: ‘정글’, ‘stat’: ‘정신 나가는 중..’}
 </h3>
+              
+
+            </a>
             
-          </a>
-          <p class="post-meta">Posted by
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="all">
+                ALL
+              </span>
             
-            Sunio
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="daily">
+                Daily
+              </span>
             
-            on
-            December 14, 2020 &middot; <span class="reading-time" title="Estimated read time">
+            <p class="post-meta" style="text-align:right; padding-top:20px; padding-bottom:0px">Posted on
+              December 14, 2020 &middot; <span class="reading-time" title="Estimated read time">
   
    3 mins  read </span>
     
-          </p>
-        </article>
-
-        <hr>
+            </p>
+          </article>
+          <hr>
+        </div>
 
         
-
-        <article class="post-preview">
-          <a href="/daily/2020/12/09/daily.html">
-            <h2 class="post-title">📚 개발? 새발 블로그</h2>
+        <div class="post-wrapper"
             
-            <h3 class="post-subtitle">글을 겁나 못쓰는 사람의 개발 일지.
+              
+                data-all
+              
+                data-daily
+              
+            >
+          <article class="post-preview">
+            <a href="/daily/2020/12/09/daily.html">
+              <h2 class="post-title">📚 개발? 새발 블로그</h2>
+              
+              <h3 class="post-subtitle">글을 겁나 못쓰는 사람의 개발 일지.
 </h3>
+              
+
+            </a>
             
-          </a>
-          <p class="post-meta">Posted by
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="all">
+                ALL
+              </span>
             
-            Sunio
+              <span class="tag btn btn-light btn-sm" onClick="onClickTag()" data-tag="daily">
+                Daily
+              </span>
             
-            on
-            December 09, 2020 &middot; <span class="reading-time" title="Estimated read time">
+            <p class="post-meta" style="text-align:right; padding-top:20px; padding-bottom:0px">Posted on
+              December 09, 2020 &middot; <span class="reading-time" title="Estimated read time">
   
    1 min  read </span>
     
-          </p>
-        </article>
-
-        <hr>
+            </p>
+          </article>
+          <hr>
+        </div>
 
         
-
         <!-- Pager -->
         <div class="clearfix">
           <a class="btn btn-primary float-right" href="/posts">View All Posts &rarr;</a>
@@ -208,6 +362,7 @@
       </div>
     </div>
   </div>
+
 
 
   <!-- Footer -->
@@ -287,13 +442,13 @@
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNC9SSFRW"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-12MCSMK34Y"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-QFNC9SSFRW');
+  gtag('config', 'G-12MCSMK34Y');
 </script>
 
 

@@ -1,4 +1,4 @@
-I"�<p>깃을 통해 정보와 프로젝트, 제대로 공유하는 방법</p>
+I"�<p>깃을 통해 정보와 프로젝트, 제대로 공유하는 방법</p>
 
 <h2 id="tools">Tools</h2>
 <p><code class="language-plaintext highlighter-rouge">Git</code></p>
@@ -23,7 +23,7 @@
 
 <ol>
   <li>Commit template이 될 작성 파일을 생성한다.
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># window powershell</span>
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># windows powershell</span>
 <span class="nv">$ </span>ni ~/.gitmessage.txt
 <span class="c"># linux shell</span>
 <span class="nv">$ </span><span class="nb">touch</span> ~/.gitmessage.txt
@@ -31,13 +31,13 @@
   </li>
   <li>에디터를 통해 파일에 접근하여 팀이 정한 템플릿(<strong>[목차 4] Code</strong> 참고)을 그대로 넣고 저장한다.</li>
   <li><code class="language-plaintext highlighter-rouge">commit.template</code>에 이 파일을 적용해준다.
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> commit.template ~/.gitmessage.txt
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config <span class="nt">--global</span> commit.template ~/.gitmessage.txt
 </code></pre></div>    </div>
   </li>
   <li>이 후의 깃 커밋 시에는 git commit (옵션 없이)를 치면 아래와 같은 화면이 나온다</li>
   <li>제목/본문/꼬릿말로 구성된 내용을 수정하고 커밋한다</li>
 </ol>
-<p align="center"><img src="https://user-images.githubusercontent.com/26760693/103534155-b531c000-4ed1-11eb-8d29-1e2c0df910e0.png" width="700" height="500" /></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/26760693/103534155-b531c000-4ed1-11eb-8d29-1e2c0df910e0.png" width="650" height="500" /></p>
 
 <h2 id="4-code">4. Code</h2>
 <hr />
