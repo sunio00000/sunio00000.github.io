@@ -31,12 +31,11 @@ h1 {
 h2 {
     font-family: 'NEXON Lv1 Gothic OTF';
 }
-h3, h4, h5, h6, p, pre, ol, dl {
+h3, h4, h5, h6, p, dl {
     font-family: 'NEXON Lv1 Gothic OTF';
 }
 p {
     font-size: 20px;
-    padding-bottom: 15px;
 }
 .hidden {
     display:none;
@@ -49,23 +48,13 @@ p {
 .btn-secondary{
     border-radius: 10px;
     border-color: transparent;
-    padding: 10px;
+    padding: 0px 10px 0px 10px;
 }
 
 .btn-light{
     border-radius: 10px;
     padding: 10px;
-}
-
-pre, code {
-    font-family: 'Roboto Mono', monospace;
-    background-color: #fcfcff;
-    margin: 0;
-}
-
-pre {
-overflow-y: scroll;
-word-wrap: normal;
+    padding: 0px 10px 0px 10px;
 }
 
 figure {
@@ -78,7 +67,7 @@ margin: 1em 0;
 }
 
 pre.highlight {
-padding: 1em;
+padding: 2em;
 }
 
 .lineno {
@@ -86,29 +75,42 @@ padding: .5em;
 }
 
 .gutter, .lineno {
-background-color: #CAEBF2;
+    background-color: #CAEBF2;
 }
 
 td.code {
 padding: 1em .5em;
 }
 
+pre {
+    overflow-y: scroll;
+    word-wrap: normal;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'NEXON Lv1 Gothic OTF Light';
+    background-color: #122b3b;
+    color: white;
+    padding: 3px 3px 3px 3px;
+    margin: 2px 2px 2px 2px;
+  }
+
 code {
-  border: none;
-  font-size: 18px;
-  font-style: italic;
-  font-family: 'NEXON Lv1 Gothic OTF Light';
-  background-color: transparent;
-  padding: 5px;
-  margin: 10px 10px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'NEXON Lv1 Gothic OTF';
+  background-color: #122b3b;
+  color: white;
+  padding: 3px 3px 3px 3px;
+  margin: 2px 2px 2px 2px;
 }
 
 br {
     margin-bottom: 15px;
 }
 ul, ol {
-    font-family: 'NEXON Lv1 Gothic OTF';
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
     font-size: 20px;
+    margin-bottom: 20px;
 }
 li {
     margin-bottom: 10px;
@@ -117,6 +119,6 @@ br {
     margin: 10px;
 }
 blockquote, figure {
-    font-family: 'NEXON Lv1 Gothic OTF';
+    font-family: 'NEXON Lv1 Gothic OTF Light';
 }
 

@@ -1,0 +1,74 @@
+I"i<blockquote>
+  <p>missing-semester 3일 차, Practice 8번</p>
+</blockquote>
+
+<h2 id="tools">Tools</h2>
+<p><code class="language-plaintext highlighter-rouge">VIM</code> / <code class="language-plaintext highlighter-rouge">WSL</code> / <code class="language-plaintext highlighter-rouge">LINUX</code></p>
+
+<h2 id="1-prologue">1. Prologue</h2>
+<hr />
+<p><code class="language-plaintext highlighter-rouge">Vim</code>은 <code class="language-plaintext highlighter-rouge">Linux</code>의 대표적인 편집기인 <code class="language-plaintext highlighter-rouge">vi</code>와 호환되는 텍스트 편집기이다.<br />
+<code class="language-plaintext highlighter-rouge">Vim</code>의 여러가지 모드를 통해 파일에 접근하고 이를 추가/수정/제거할 수 있다.<br />
+사실 아직 나에게 <code class="language-plaintext highlighter-rouge">Vim</code>은 input을 키보드로만 받는 무식한 메모장일 뿐이다.<br />
+좀 더 친해져보도록 노력해보자.<br />
+왜 쓰는거야 근데..</p>
+
+<h2 id="2-issue">2. Issue</h2>
+<hr />
+<p>여기 example-data.xml이 있다.</p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;people&gt;</span>
+  <span class="nt">&lt;person&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Johnny Zhang Jr.<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;email&gt;</span>amyalvarez@cole.com<span class="nt">&lt;/email&gt;</span>
+  <span class="nt">&lt;/person&gt;</span>
+  <span class="nt">&lt;person&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Edward Cook<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;email&gt;</span>dsparks@alvarez-dunn.com<span class="nt">&lt;/email&gt;</span>
+  <span class="nt">&lt;/person&gt;</span>
+  <span class="nt">&lt;person&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Stephen Sweeney<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;email&gt;</span>dlewis@gmail.com<span class="nt">&lt;/email&gt;</span>
+  <span class="nt">&lt;/person&gt;</span>
+  <span class="nt">&lt;person&gt;</span>
+    <span class="nt">&lt;name&gt;</span>Krystal Riley<span class="nt">&lt;/name&gt;</span>
+    <span class="nt">&lt;email&gt;</span>jflores@wright.biz<span class="nt">&lt;/email&gt;</span>
+  <span class="nt">&lt;/person&gt;</span>
+<span class="nt">&lt;/people&gt;</span>
+</code></pre></div></div>
+<h6 id="실제로는-1000줄에-해당하는-파일이지만-그-중-일부만-잘라-실습하도록-하자"><em>(실제로는 1000줄에 해당하는 파일이지만 그 중 일부만 잘라 실습하도록 하자.)</em></h6>
+<p><code class="language-plaintext highlighter-rouge">XML</code>은 markup language로서 ‘태그’ 내에 인라인으로 정보나 데이터를 표현하는 요소(element)를 가지고 있다.<br />
+위 예제에서의 element는 <code class="language-plaintext highlighter-rouge">people</code> &gt; <code class="language-plaintext highlighter-rouge">person</code> &gt;  {<code class="language-plaintext highlighter-rouge">name</code>,<code class="language-plaintext highlighter-rouge">email</code>} 로 구성되어 있다고 볼 수 있다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">JSON</code>은 JavaScript Object Notation의 약자로서 데이터를 좀 더 쉽게 교환하고 저장하기 위해 만들어진 텍스트 기반의 _‘형식’_의 하나라고 알면 될 것 같다.<br />
+참고로, <code class="language-plaintext highlighter-rouge">XML</code>은 EXtensible Markup Language의 약자이다. (link :: <a href="!http://www.tcpschool.com/json/json_intro_xml">두 사이의 공통점과 차이점</a>)</p>
+
+<p>아무튼, 우리는 이 둘간의 변환을 해야한다. 구조의 대한 자세한 설명은 6.Reference 의 링크를 참조하도록 하고, 이제 문제를 해결해보자.</p>
+
+<h2 id="3-resolve">3. Resolve</h2>
+<hr />
+<p>글쓰는 본인도 위 내용을 잘 모르기 때문에, 코드를 보고 하나씩 해석하는 과정을 거치며, 설명을 하도록 해야겠다.</p>
+<ol>
+  <li>일단 Vim으로 example-data.xml을 열어보자.<br />
+```xml</li>
+</ol>
+<people>
+  <person>
+    <name>Johnny Zhang Jr.</name>
+    <email>amyalvarez@cole.com</email>
+  </person>
+  ...
+</people>
+<p>```</p>
+
+<h2 id="4-code">4. Code</h2>
+<hr />
+
+<h2 id="5-post-script">5. Post Script</h2>
+<hr />
+
+<h2 id="6-reference">6. Reference</h2>
+<hr />
+<p>missing-semester :: <a href="!https://missing-semester-kr.github.io/2020/editors/">Lecture 3. VIM editor</a>
+XML이 뭐야? :: <a href="!http://www.tcpschool.com/xml/xml_basic_structure">XML 구조</a>
+JSON이 뭐야? :: <a href="!http://www.tcpschool.com/json/intro">JSON</a></p>
+:ET

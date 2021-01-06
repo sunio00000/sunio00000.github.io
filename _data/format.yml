@@ -7,6 +7,10 @@ git: GIT
 til: TIL
 all: ALL
 daily: Daily
+vim: VIM
+xml: XML
+json: JSON
+regex: REGEX
 algorithm: Algorithm
 ps: Problem Solving
 ...

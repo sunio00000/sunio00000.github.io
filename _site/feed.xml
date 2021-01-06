@@ -5,9 +5,166 @@
     <description>Make me better than i was before.</description>
     <link>https://sunio00000.github.io//</link>
     <atom:link href="https://sunio00000.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 05 Jan 2021 22:11:56 +0900</pubDate>
-    <lastBuildDate>Tue, 05 Jan 2021 22:11:56 +0900</lastBuildDate>
+    <pubDate>Wed, 06 Jan 2021 20:26:08 +0900</pubDate>
+    <lastBuildDate>Wed, 06 Jan 2021 20:26:08 +0900</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>🌋 VIM 을 이용하여 XML to JSON Parsing</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;missing-semester 3일 차, Practice 8번&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;OS : Windows10&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VIM&lt;/code&gt; / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WSL&lt;/code&gt; / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LINUX&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-prologue&quot;&gt;1. Prologue&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Vim&lt;/code&gt;은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Linux&lt;/code&gt;의 대표적인 편집기인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vi&lt;/code&gt;와 호환되는 텍스트 편집기이다.&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Vim&lt;/code&gt;의 여러가지 모드를 통해 파일에 접근하고 이를 추가/수정/제거할 수 있다.&lt;br /&gt;
+사실 아직 나에게 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Vim&lt;/code&gt;은 input을 키보드로만 받는 무식한 메모장일 뿐이다.&lt;br /&gt;
+좀 더 친해져보도록 노력해보자.&lt;br /&gt;
+왜 쓰는거야 근데..&lt;/p&gt;
+
+&lt;h2 id=&quot;2-issue&quot;&gt;2. Issue&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;여기 example-data.xml이 있다.&lt;/p&gt;
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;people&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;person&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;name&amp;gt;&lt;/span&gt;Johnny Zhang Jr.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/name&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;email&amp;gt;&lt;/span&gt;amyalvarez@cole.com&lt;span class=&quot;nt&quot;&gt;&amp;lt;/email&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/person&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;person&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;name&amp;gt;&lt;/span&gt;Edward Cook&lt;span class=&quot;nt&quot;&gt;&amp;lt;/name&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;email&amp;gt;&lt;/span&gt;dsparks@alvarez-dunn.com&lt;span class=&quot;nt&quot;&gt;&amp;lt;/email&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/person&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;person&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;name&amp;gt;&lt;/span&gt;Stephen Sweeney&lt;span class=&quot;nt&quot;&gt;&amp;lt;/name&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;email&amp;gt;&lt;/span&gt;dlewis@gmail.com&lt;span class=&quot;nt&quot;&gt;&amp;lt;/email&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/person&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;person&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;name&amp;gt;&lt;/span&gt;Krystal Riley&lt;span class=&quot;nt&quot;&gt;&amp;lt;/name&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;email&amp;gt;&lt;/span&gt;jflores@wright.biz&lt;span class=&quot;nt&quot;&gt;&amp;lt;/email&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/person&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/people&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h6 id=&quot;실제로는-1000줄에-해당하는-파일이지만-그-중-일부만-잘라-실습하도록-하자&quot;&gt;&lt;em&gt;(실제로는 1000줄에 해당하는 파일이지만 그 중 일부만 잘라 실습하도록 하자.)&lt;/em&gt;&lt;/h6&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XML&lt;/code&gt;은 markup language로서 ‘태그’ 내에 인라인으로 정보나 데이터를 표현하는 요소(element)를 가지고 있다.&lt;br /&gt;
+위 예제에서의 element는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;people&lt;/code&gt; &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;person&lt;/code&gt; &amp;gt;  {&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;name&lt;/code&gt;,&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;email&lt;/code&gt;} 로 구성되어 있다고 볼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSON&lt;/code&gt;은 JavaScript Object Notation의 약자로서 데이터를 좀 더 쉽게 교환하고 저장하기 위해 만들어진 텍스트 기반의 _‘형식’_의 하나라고 알면 될 것 같다.&lt;br /&gt;
+참고로, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XML&lt;/code&gt;은 EXtensible Markup Language의 약자이다. (link :: &lt;a href=&quot;!http://www.tcpschool.com/json/json_intro_xml&quot;&gt;두 사이의 공통점과 차이점&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;아무튼, 우리는 이 둘간의 변환을 해야한다. 구조의 대한 자세한 설명은 6.Reference 의 링크를 참조하도록 하고, 이제 문제를 해결해보자.&lt;/p&gt;
+
+&lt;h2 id=&quot;3-resolve&quot;&gt;3. Resolve&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;글쓰는 본인도 위 내용을 잘 모르기 때문에, 코드를 보고 하나씩 해석하는 과정을 거치며, 설명을 하도록 해야겠다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;일단 Vim으로 example-data.xml을 열어보자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;people&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;person&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;name&amp;gt;&lt;/span&gt;Johnny Zhang Jr.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/name&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;email&amp;gt;&lt;/span&gt;amyalvarez@cole.com&lt;span class=&quot;nt&quot;&gt;&amp;lt;/email&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/person&amp;gt;&lt;/span&gt;
+  ...
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/people&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;우리는 이제 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sed&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Regex&lt;/code&gt;를 사용할 것이다. 텍스트를 분해하거나 변환하기 위한 프로그램(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sed&lt;/code&gt;)의 특정한 규칙을 가진 문자열의 집합을 표현하는 방법(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Regex&lt;/code&gt;, 정규표현식은 여러 language에서 지원한다)으로 세한 내용은 너무나 많아 생략한다. 🙃&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-vim highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/people/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;d&lt;/span&gt; 
+ &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; %s&lt;span class=&quot;sr&quot;&gt;/&amp;lt;person&amp;gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;g&lt;/span&gt; 
+ &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; %s&lt;span class=&quot;sr&quot;&gt;/&amp;lt;\/person&amp;gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;g&lt;/span&gt; 
+ &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; %s&lt;span class=&quot;sr&quot;&gt;/&amp;lt;name&amp;gt;\(.*\)&amp;lt;\/name&amp;gt;/&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;\1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;g&lt;/span&gt; 
+ &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; %s&lt;span class=&quot;sr&quot;&gt;/&amp;lt;email&amp;gt;\(.*\)&amp;lt;\/email&amp;gt;/&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;email&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;\1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;/&lt;span class=&quot;k&quot;&gt;g&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;커맨드 입력 모드에서 위의 커맨드를 순서대로 입력해준다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;: g/people/d&lt;/code&gt; 커맨드는 모든 라인에 적용하여(g) “people” 을 찾고 line delete(d) 한다.&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;: %s/&amp;lt;person&amp;gt;/{/g&lt;/code&gt; 커맨드는 모든 라인의 ‘&lt;person&gt;'을 '{'로 변경한다.&lt;/person&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;: %s/&amp;lt;\/person&amp;gt;/},/g&lt;/code&gt; 위 커맨드와 같고, 역슬래쉬(‘')를 사용하는 이유는 슬래쉬(‘/’)를 문자로 받기 위함인 것 같다. 그리고 추가로 브라켓 구분을 위한 delimeter ‘,’도 추가해주자.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;: %s/&amp;lt;name&amp;gt;\(.*\)&amp;lt;\/name&amp;gt;/&quot;name&quot;:&quot;\1&quot;,/g&lt;/code&gt; 커맨드는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;name&amp;gt;*&amp;lt;/name&amp;gt;&lt;/code&gt; 을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;name&quot; : &quot;*&quot;&lt;/code&gt; 로 변경해준다. (\1 은 첫번째 backreference를 의미한다.)&lt;/p&gt;
+
+&lt;p&gt;이 후, manually 하게 마지막 쉼표(,)를 제거하고, 대괄호(‘[’,’]’)를 앞뒤로 추가하면 끝난다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[
+  {
+    &quot;name&quot;: 'Johnny Zhang Jr.',
+    &quot;email&quot;: 'amyalvarez@cole.com'
+  },
+  {
+    &quot;name&quot;: 'Edward Cook',
+    &quot;email&quot;: 'dsparks@alvarez-dunn.com'
+  },
+  {
+    &quot;name&quot;: 'Stephen Sweeney',
+    &quot;email&quot;: 'dlewis@gmail.com'
+  },
+  {
+    &quot;name&quot;: 'Krystal Riley',
+    &quot;email&quot;: 'jflores@wright.biz'
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;JSON 형식으로 완성되었다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-code&quot;&gt;4. Code&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;ol&gt;
+      &lt;li&gt;Resolve 참고&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-post-script&quot;&gt;5. Post Script&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;vim에 대해 이해하는 단계인데 어째 regex에 대해서 더 공부를 하게 된 것 같다는 생각이 든다.
+언젠가 주력으로 vim을 쓰게 된다면 오늘 배운걸 다시 써먹을 날이 오겠지… 상상..🤒&lt;/p&gt;
+
+&lt;h2 id=&quot;6-reference&quot;&gt;6. Reference&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;missing-semester :: &lt;a href=&quot;!https://missing-semester-kr.github.io/2020/editors/&quot;&gt;Lecture 3. VIM editor&lt;/a&gt;&lt;br /&gt;
+XML이 뭐야? :: &lt;a href=&quot;!http://www.tcpschool.com/xml/xml_basic_structure&quot;&gt;XML 구조&lt;/a&gt;&lt;br /&gt;
+JSON이 뭐야? :: &lt;a href=&quot;!http://www.tcpschool.com/json/intro&quot;&gt;JSON&lt;/a&gt;&lt;br /&gt;
+Sed / Regex :: &lt;a href=&quot;!https://www.gnu.org/software/sed/manual/html_node/Common-Commands.html#Common-Commands&quot;&gt;Sed_manual&lt;/a&gt;&lt;br /&gt;
+VIM Basic search and replace :: &lt;a href=&quot;!https://vim.fandom.com/wiki/Search_and_replacei&quot;&gt;vim_tip_wiki&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 04 Jan 2021 13:00:00 +0900</pubDate>
+        <link>https://sunio00000.github.io//til/2021/01/04/til.html</link>
+        <guid isPermaLink="true">https://sunio00000.github.io//til/2021/01/04/til.html</guid>
+        
+        <category>all</category>
+        
+        <category>til</category>
+        
+        <category>vim</category>
+        
+        <category>json</category>
+        
+        <category>xml</category>
+        
+        <category>regex</category>
+        
+        
+        <category>TIL</category>
+        
+      </item>
     
       <item>
         <title>👨🏻‍💻 Git 커밋 Template 아름답게 전달하자</title>
@@ -23,8 +180,7 @@
 도구는 손짓 발짓이 될 수도 있고, 코드 그 자체가 되기도 한다. (뭐 이외에도 굉장하고 무궁무진한 방법들이 많긴하다. 🙄)&lt;br /&gt;
 우리는 효율적인 의사소통 도구의 활용이 우리에게 당연히도 최대의 이득을 가져다 줄 것이라 생각한다.&lt;br /&gt;
 하지만, 게을러서 포기하는 어떠한 (수많은) 것들이 있다..&lt;br /&gt;
-그 중에 버전관리 프로그램을 사용하며 작성하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Commit message&lt;/code&gt;를 이쁘고 명료하게 작성해보자.&lt;br /&gt;
-안녕하세요&lt;/p&gt;
+그 중에 버전관리 프로그램을 사용하며 작성하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Commit message&lt;/code&gt;를 이쁘고 명료하게 작성해보자.&lt;/p&gt;
 
 &lt;h2 id=&quot;2-issue&quot;&gt;2. Issue&lt;/h2&gt;
 &lt;hr /&gt;
