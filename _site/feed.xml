@@ -5,8 +5,8 @@
     <description>Make me better than i was before.</description>
     <link>https://sunio00000.github.io//</link>
     <atom:link href="https://sunio00000.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Jan 2021 20:26:08 +0900</pubDate>
-    <lastBuildDate>Wed, 06 Jan 2021 20:26:08 +0900</lastBuildDate>
+    <pubDate>Wed, 06 Jan 2021 20:34:22 +0900</pubDate>
+    <lastBuildDate>Wed, 06 Jan 2021 20:34:22 +0900</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -17,9 +17,10 @@
 
 &lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;OS : Windows10&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VIM&lt;/code&gt; / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WSL&lt;/code&gt; / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LINUX&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;OS : Windows10&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VIM&lt;/code&gt; / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WSL&lt;/code&gt; / &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LINUX&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;1-prologue&quot;&gt;1. Prologue&lt;/h2&gt;
 &lt;hr /&gt;

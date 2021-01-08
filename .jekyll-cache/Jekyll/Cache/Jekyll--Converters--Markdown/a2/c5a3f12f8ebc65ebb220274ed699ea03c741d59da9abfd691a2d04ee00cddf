@@ -1,11 +1,11 @@
-I"$!<blockquote>
+I"�"<blockquote>
   <p>missing-semester 3일 차, Practice 8번</p>
 </blockquote>
 
 <h2 id="tools">Tools</h2>
 <ul>
-  <li>OS : Windows10<br />
-<code class="language-plaintext highlighter-rouge">VIM</code> / <code class="language-plaintext highlighter-rouge">WSL</code> / <code class="language-plaintext highlighter-rouge">LINUX</code></li>
+  <li>OS : Windows10</li>
+  <li><code class="language-plaintext highlighter-rouge">VIM</code> / <code class="language-plaintext highlighter-rouge">WSL</code> / <code class="language-plaintext highlighter-rouge">LINUX</code></li>
 </ul>
 
 <h2 id="1-prologue">1. Prologue</h2>
@@ -82,7 +82,7 @@
 
 <p><code class="language-plaintext highlighter-rouge">: %s/&lt;\/person&gt;/},/g</code> 위 커맨드와 같고, 역슬래쉬(‘')를 사용하는 이유는 슬래쉬(‘/’)를 문자로 받기 위함인 것 같다. 그리고 추가로 브라켓 구분을 위한 delimeter ‘,’도 추가해주자.</p>
 
-<p><code class="language-plaintext highlighter-rouge">: %s/&lt;name&gt;\(.*\)&lt;\/name&gt;/"name":"\1",/g</code> 커맨드는 <code class="language-plaintext highlighter-rouge">&lt;name&gt;*&lt;/name&gt;</code> 을 <code class="language-plaintext highlighter-rouge">"name" : "*"</code> 로 변경해준다.</p>
+<p><code class="language-plaintext highlighter-rouge">: %s/&lt;name&gt;\(.*\)&lt;\/name&gt;/"name":"\1",/g</code> 커맨드는 <code class="language-plaintext highlighter-rouge">&lt;name&gt;*&lt;/name&gt;</code> 을 <code class="language-plaintext highlighter-rouge">"name" : "*"</code> 로 변경해준다. (\1 은 첫번째 backreference를 의미한다.)</p>
 
 <p>이 후, manually 하게 마지막 쉼표(,)를 제거하고, 대괄호(‘[’,’]’)를 앞뒤로 추가하면 끝난다.</p>
 
@@ -111,15 +111,24 @@
 
 <h2 id="4-code">4. Code</h2>
 <hr />
+<ul>
+  <li>
+    <ol>
+      <li>Resolve 참고</li>
+    </ol>
+  </li>
+</ul>
 
 <h2 id="5-post-script">5. Post Script</h2>
 <hr />
+<p>vim에 대해 이해하는 단계인데 어째 regex에 대해서 더 공부를 하게 된 것 같다는 생각이 든다.
+언젠가 주력으로 vim을 쓰게 된다면 오늘 배운걸 다시 써먹을 날이 오겠지… 상상..🤒</p>
 
 <h2 id="6-reference">6. Reference</h2>
 <hr />
-<p>missing-semester :: <a href="!https://missing-semester-kr.github.io/2020/editors/">Lecture 3. VIM editor</a>
-XML이 뭐야? :: <a href="!http://www.tcpschool.com/xml/xml_basic_structure">XML 구조</a>
-JSON이 뭐야? :: <a href="!http://www.tcpschool.com/json/intro">JSON</a>
-Sed / Regex :: <a href="!https://www.gnu.org/software/sed/manual/html_node/Common-Commands.html#Common-Commands">Sed_manual</a>
+<p>missing-semester :: <a href="!https://missing-semester-kr.github.io/2020/editors/">Lecture 3. VIM editor</a><br />
+XML이 뭐야? :: <a href="!http://www.tcpschool.com/xml/xml_basic_structure">XML 구조</a><br />
+JSON이 뭐야? :: <a href="!http://www.tcpschool.com/json/intro">JSON</a><br />
+Sed / Regex :: <a href="!https://www.gnu.org/software/sed/manual/html_node/Common-Commands.html#Common-Commands">Sed_manual</a><br />
 VIM Basic search and replace :: <a href="!https://vim.fandom.com/wiki/Search_and_replacei">vim_tip_wiki</a></p>
 :ET
