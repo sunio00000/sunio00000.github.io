@@ -5,9 +5,95 @@
     <description>Make me better than i was before.</description>
     <link>https://sunio00000.github.io//</link>
     <atom:link href="https://sunio00000.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Jan 2021 20:34:22 +0900</pubDate>
-    <lastBuildDate>Wed, 06 Jan 2021 20:34:22 +0900</lastBuildDate>
+    <pubDate>Sat, 16 Jan 2021 10:44:39 +0900</pubDate>
+    <lastBuildDate>Sat, 16 Jan 2021 10:44:39 +0900</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>🔐 보안과 암호화, 기본 키워드</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;missing-semester 7일 차, Security and Cryptography&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;prologue&quot;&gt;Prologue&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;missing-semester의 강의를 다들어가는 시점에서 재미를 느끼며 들었던 강의가 되시겠다. 이름하야 보안과 암호화 평소에 신경도 안쓰던 데이터들과 이상 기이한 문자들의 의미를 조금이나마 이해해본 강의였다. 세상에 신기한 것들이 참 많다. 상식으로만 알아도 도움이 될 것 같다. &lt;bold&gt;강의에서는 보안과 암호학에 대해 학문적인 깊은 이해를 바탕으로 한 후에 실제 응용에 들어가라는 경고를 남긴다.&lt;/bold&gt; 그만큼 이 분야의 그것이 간단하지 않고 예민하게 설계되어 있다는 의미로 받아들이면 될 것 같다.&lt;br /&gt;
+물론, 할 생각도 없었다.🙄&lt;br /&gt;
+간단하게 강의 상 키워드 위주로 정보를 습득하고 정리해보자.&lt;/p&gt;
+
+&lt;h2 id=&quot;엔트로피&quot;&gt;엔트로피&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;고등학교 필독서에서 설명하던 열역학의 그 엔트로피가 아니다. 정보학(informatics)에도 엔트로피라는 개념이 있는데, 이는 &lt;bold&gt;정보를 표현하는 하나의 단위&lt;/bold&gt;이다. 단위의 표현 방법은 우리에게 너무 익숙한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bit&lt;/code&gt;를 사용한다.&lt;/p&gt;
+
+&lt;h2 id=&quot;hash&quot;&gt;Hash&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; #&lt;/code&gt;(해쉬태그), 어디선가 많이 들어본 단어이다. 맞다 그 Hash다.&lt;/p&gt;
+&lt;h2 id=&quot;키-유도-함수-key-derivation-functions&quot;&gt;키 유도 함수 (Key derivation functions)&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;대칭키-암호-symmetric-cryptography&quot;&gt;대칭키 암호 (Symmetric cryptography)&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;비대칭-암호화-asymmetric-cryptography&quot;&gt;비대칭 암호화 (Asymmetric cryptography)&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;참고링크&quot;&gt;참고링크&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;MIT(Missing-Semester) :: &lt;a href=&quot;!https://missing-semester-kr.github.io/2020/security/&quot;&gt;Security &amp;amp; Cryptography&lt;/a&gt;&lt;br /&gt;
+NCSoft-danbi :: &lt;a href=&quot;!https://danbi-ncsoft.github.io/study/2018/12/06/entropy.html&quot;&gt;엔트로피와 의사결정나무&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Jan 2021 13:00:00 +0900</pubDate>
+        <link>https://sunio00000.github.io//til/2021/01/15/til.html</link>
+        <guid isPermaLink="true">https://sunio00000.github.io//til/2021/01/15/til.html</guid>
+        
+        <category>all</category>
+        
+        <category>missing</category>
+        
+        <category>informatics</category>
+        
+        
+        <category>TIL</category>
+        
+      </item>
+    
+      <item>
+        <title>📘 무엇이 나를 괴롭게 했을까.</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;앞으로의 다짐을 하며,&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;푸념&quot;&gt;푸념&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;근래 정글 프로그램을 하며, 정말 수많은 생각과 감정, 그 위로 정보들이 머리를 스쳐가는 것 같다. 하루하루가 정말 보람차고, 내 삶에 있어서 정말 중요한 한 파트가 될 것 같다고 생각이 드는 즐거운 매일이다. 그만큼 많은 에너지를 쏟아내서 일까. 내 머릿 속은 정리되지 못한 것들로 가득하다.&lt;/p&gt;
+
+&lt;p&gt;나는 무엇부터 어디서부터 잘 못했을까.&lt;br /&gt;
+안풀리는 일이 있고 주변의 모든게 맘에 들지 않을 때, 수도 없이 이런 생각을 해왔던 것 같다. 하루에 12시간 이상을 모니터 앞에 앉아 다른 이들이 모여 이론이나 프로젝트에 열중하는 것을 보면, 내가 그들과 같이 그러지 못하는 이유에 대해 하루에 5번도 넘게 생각을 한다.&lt;/p&gt;
+
+&lt;p&gt;근래에는 내 자신에게 너무나 화가 났다. 같은 목적을 가지고 함께 하는 정말 뛰어난 사람들을 보며, 내 부족함에 대해 아무것도 느끼지 못하고 있었다는 안일함 때문에 이불킥을 했다. 나는 항상 무언가 하고는 있었지만 목적을 위해 집요하게 집중하지는 않았다. 간절함 같은 것이 없었다. 그냥 그 시간을 지냈던 것 같다. 더 깊게 생각하고 노력하지 않았다.&lt;/p&gt;
+
+&lt;p&gt;팀 프로젝트를 한참 진행하고 잠깐의 휴식 중에, 내가 팀원들에게 어느 부분에선가 책임을 전가하고 있다는 것을 느꼈다. 이들이 팀을 위해 무언가를 해낼 것이고, 나는 그에 따라 기뻐하기만 하면 되는 것마냥 무책임한 생각이 있었던 것 같다. 사실 프로젝트 활동 뿐 아니라, 이 교육의 커리큘럼을 그대로 따라가기만 하면 보증 수표가 될 것마냥 흐르는 대로 생각을 하는 내 모습도 이와 크게 다르지 않다.&lt;/p&gt;
+
+&lt;p&gt;처음 이 곳에 왔을 때 가졌던 다짐 같은 것들이 지금의 나에게서 보이지가 않는다.&lt;br /&gt;
+내가 최선을 다하지 못했다는 사실을 알고 보란듯이 내 머리를 치는 결과물들은 점점 쌓여만 가고있고, 어느덧 1달하고 보름이 지난 이 시점에 나는 내가 어느 지점에 있는지 느껴가고 있다. 지금 처럼은 안될 것 같다.&lt;br /&gt;
+조금 더 시간이 흘러 선명해질 내 위치가 지금의 위치는 아니였으면 좋겠다.&lt;br /&gt;
+적어도, 내 스스로를 화나게 하는 행동을 하지 않았으면 좋겠다.&lt;/p&gt;
+
+&lt;h5 id=&quot;이런-고민-하는-것도-너무-고깝다&quot;&gt;이런 고민 하는 것도 너무 고깝다.&lt;/h5&gt;
+
+</description>
+        <pubDate>Thu, 14 Jan 2021 13:26:28 +0900</pubDate>
+        <link>https://sunio00000.github.io//daily/2021/01/14/daily.html</link>
+        <guid isPermaLink="true">https://sunio00000.github.io//daily/2021/01/14/daily.html</guid>
+        
+        <category>all</category>
+        
+        <category>daily</category>
+        
+        
+        <category>daily</category>
+        
+      </item>
     
       <item>
         <title>🌋 VIM 을 이용하여 XML to JSON Parsing</title>
@@ -151,6 +237,8 @@ VIM Basic search and replace :: &lt;a href=&quot;!https://vim.fandom.com/wiki/Se
         <guid isPermaLink="true">https://sunio00000.github.io//til/2021/01/04/til.html</guid>
         
         <category>all</category>
+        
+        <category>missing</category>
         
         <category>til</category>
         
@@ -439,8 +527,10 @@ VIM Basic search and replace :: &lt;a href=&quot;!https://vim.fandom.com/wiki/Se
       </item>
     
       <item>
-        <title>📚 개발? 새발 블로그</title>
-        <description>&lt;p&gt;글을 겁나 못쓰는 사람의 개발 일지.&lt;/p&gt;
+        <title>📘 개발? 새발 블로그 만들었다!</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;글을 겁나 못쓰는 사람의 개발 일지.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;개발, 생각, 일상의 내용을 기록하는 창구로 사용하게 될 것 같다.&lt;/p&gt;
 
