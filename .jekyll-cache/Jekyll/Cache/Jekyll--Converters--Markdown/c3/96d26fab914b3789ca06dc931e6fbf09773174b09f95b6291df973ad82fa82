@@ -1,0 +1,43 @@
+I"|<blockquote>
+  <p>missing-semester 7일 차, Security and Cryptography</p>
+</blockquote>
+
+<blockquote>
+  <p>missing-semester 3일 차, Practice 8번</p>
+</blockquote>
+
+<h2 id="tools">Tools</h2>
+<ul>
+  <li>OS : Windows10</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">VIM</code> / <code class="language-plaintext highlighter-rouge">WSL</code> / <code class="language-plaintext highlighter-rouge">LINUX</code></p>
+
+<h2 id="1-prologue">1. Prologue</h2>
+<hr />
+<p><code class="language-plaintext highlighter-rouge">Vim</code>은 <code class="language-plaintext highlighter-rouge">Linux</code>의 대표적인 편집기인 <code class="language-plaintext highlighter-rouge">vi</code>와 호환되는 텍스트 편집기이다.<br />
+<code class="language-plaintext highlighter-rouge">Vim</code>의 여러가지 모드를 통해 파일에 접근하고 이를 추가/수정/제거할 수 있다.<br />
+사실 아직 나에게 <code class="language-plaintext highlighter-rouge">Vim</code>은 input을 키보드로만 받는 무식한 메모장일 뿐이다.<br />
+좀 더 친해져보도록 노력해보자.<br />
+왜 쓰는거야 근데..</p>
+
+<h2 id="2-issue">2. Issue</h2>
+<hr />
+
+<h2 id="3-resolve">3. Resolve</h2>
+<hr />
+
+<h2 id="4-code">4. Code</h2>
+<hr />
+
+<h2 id="5-post-script">5. Post Script</h2>
+<hr />
+
+<h2 id="6-reference">6. Reference</h2>
+<hr />
+<p>missing-semester :: <a href="!https://missing-semester-kr.github.io/2020/editors/">Lecture 3. VIM editor</a><br />
+XML이 뭐야? :: <a href="!http://www.tcpschool.com/xml/xml_basic_structure">XML 구조</a><br />
+JSON이 뭐야? :: <a href="!http://www.tcpschool.com/json/intro">JSON</a><br />
+Sed / Regex :: <a href="!https://www.gnu.org/software/sed/manual/html_node/Common-Commands.html#Common-Commands">Sed_manual</a><br />
+VIM Basic search and replace :: <a href="!https://vim.fandom.com/wiki/Search_and_replacei">vim_tip_wiki</a></p>
+:ET
