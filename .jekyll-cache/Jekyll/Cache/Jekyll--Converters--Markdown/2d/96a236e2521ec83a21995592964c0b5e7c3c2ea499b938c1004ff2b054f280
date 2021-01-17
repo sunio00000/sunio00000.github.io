@@ -1,0 +1,67 @@
+I"�<blockquote>
+  <p>missing-semester 7일 차, Security and Cryptography</p>
+</blockquote>
+
+<h2 id="prologue">Prologue</h2>
+<hr />
+<p>missing-semester의 강의를 다들어가는 시점에서 재미를 느끼며 들었던 강의가 되시겠다. 이름하야 보안과 암호화 평소에 신경도 안쓰던 데이터들과 이상 기이한 문자들의 의미를 조금이나마 이해해본 강의였다. 세상에 신기한 것들이 참 많다. 상식으로만 알아도 도움이 될 것 같다. <bold>강의에서는 보안과 암호학에 대해 학문적인 깊은 이해를 바탕으로 한 후에 실제 응용에 들어가라는 경고를 남긴다.</bold> 그만큼 이 분야의 그것이 간단하지 않고 예민하게 설계되어 있다는 의미로 받아들이면 될 것 같다.<br />
+물론, 할 생각도 없었다.🙄<br />
+간단하게 강의 상 키워드 위주로 정보를 습득하고 정리해보자.</p>
+
+<h2 id="엔트로피">엔트로피</h2>
+<hr />
+<p>고등학교 필독서에서 설명하던 열역학의 그 엔트로피가 아니다. 정보학(informatics)에도 엔트로피라는 개념이 있는데, 이는 임의성을 정도를 나타내는 척도이며, <bold>"정보"를 표현하는 하나의 단위</bold>이다. ‘그 단위’의 표현 방법은 우리에게 너무 익숙한 <code class="language-plaintext highlighter-rouge">bit</code>를 사용한다.</p>
+
+<p>나는 그저 <code class="language-plaintext highlighter-rouge">bit</code>는 0과 1을 표현하는 수단으로 알고 있었는데, 오! 동전의 앞면과 뒷면의 엔트로피를 나타내면 그것이 <code class="language-plaintext highlighter-rouge">1 bit</code>인 것이다. 6면 주사위의 엔트로피는 그럼 어떻게 될까? 
+\(entrophy = \log_2 N \quad N \ of \ Possiblity\)<br />
+위 식을 토대로 보면 <code class="language-plaintext highlighter-rouge">2.58 bit</code> 정도의 임의성을 가지고 있다고 생각할 수 있고, 이는 동전 던지기보다 2.6배정도 복잡한 임의성을 가지고 있다고 판단하게 되는 것이다.<br />
+아래의 그림은 xkcd의 코믹스 중 일부인데, Password를 어떻게 설정하는 것이 더 안전한지에 대한 이야기를 보여준다.</p>
+<p align="center"><img src="https://user-images.githubusercontent.com/26760693/104845587-97c11500-5919-11eb-88bd-2ea94299b297.png" width="400" height="400" /></p>
+
+<p>요약하자면, <code class="language-plaintext highlighter-rouge">brute force</code>방식으로 암호를 해킹한다는 가정 하에 암호를 구성할 때, 우리가 읽기 복잡해 보이는 암호를 짧게 작성하는 것보다는 많은 단어를 구성하여 많은 임의성을 주는 것이 더 해킹하기 어렵다는 이야기이다.</p>
+
+<p>그러므로 <bold>확률이 낮을수록 어떤 정보일지는 불확실하게 되고, 우리는 이때 '정보가 많다', '엔트로피가 높다'고 표현한다.</bold> - 위키백과</p>
+
+<h2 id="hash-function">Hash Function</h2>
+<hr />
+<p>SNS를 많이 해보았다면 ` #<code class="language-plaintext highlighter-rouge"> (해쉬태그)를 어디선가 많이 보았을 것이다. 맞다 우리가 논할 Hash가 그 Hash다.  
+정의하자면, </code>Hash<code class="language-plaintext highlighter-rouge">는 </code>Hash Function<code class="language-plaintext highlighter-rouge">에 의해 얻어지는 값으로서 Hash Function은 &lt;bold&gt;임의의 길이의 데이터가 고정된 길이의 데이터로 Mapping 해주는 함수&lt;/bold&gt;이다.  
+개발자가 가장 가깝게 볼 수 있는 Hash Function의 사용은 </code>Git<code class="language-plaintext highlighter-rouge">의 </code>Commit id<code class="language-plaintext highlighter-rouge">로 사용되는 </code>SHA-1<code class="language-plaintext highlighter-rouge"> key이다. (</code>160 bit`로 표현된 16진수 40글자로 이루어져 있다.)</p>
+
+<pre><code class="language-git">git checkout "SHA-1 hash 8자리" # 특정 commit으로 이동하기
+</code></pre>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/26760693/104846179-96451c00-591c-11eb-9c24-4fa8824d894d.png" width="200" height="350" /></p>
+
+<p>Hash Function의 특징은 다음과 같다.</p>
+<ol>
+  <li>Deterministic : 같은 입력 값은 항상 같은 결과를 도출한다.</li>
+  <li>Non-invertible : 원하는 출력 <code class="language-plaintext highlighter-rouge">h</code>에 대하여 <code class="language-plaintext highlighter-rouge">Hash(m) = h</code> 인 <code class="language-plaintext highlighter-rouge">m</code>을 찾기가 어렵다.</li>
+  <li>Target collision resistant : <code class="language-plaintext highlighter-rouge">m1</code> 이 주어졌을 때, <code class="language-plaintext highlighter-rouge">Hash(m1) = Hash(m2)</code>를 만족하는 <code class="language-plaintext highlighter-rouge">m2</code>를 찾기 어렵다.</li>
+  <li>Collision resistant : <code class="language-plaintext highlighter-rouge">Hash(m1) = Hash(m2)</code>를 만족하는 <code class="language-plaintext highlighter-rouge">m1</code>과 <code class="language-plaintext highlighter-rouge">m2</code>를 찾기 어려움</li>
+</ol>
+
+<p>이러한 이유로 Hash Function은 암호화에 사용되며, 굉장히 다양한 종류의 Function을 가지고 있다.</p>
+
+<h2 id="대칭키-암호화-symmetric-cryptography">대칭키 암호화 (Symmetric cryptography)</h2>
+<hr />
+<p align="center"><img src="https://user-images.githubusercontent.com/26760693/104847416-356d1200-5923-11eb-86e2-af340d6dba9f.jpg" /></p>
+
+<p>대칭키 암호화는 암호화와 복호화에 모두 같은 암호키를 사용하는 방식을 말한다.<br />
+대칭키 암호는 암호화에 연산 속도가 굉장히 빨라 효율적인 암호 시스템을 가질 수 있다는 장점 이외에 <code class="language-plaintext highlighter-rouge">Public Key</code>를 공유(전송)하기 때문에 중간에 <code class="language-plaintext highlighter-rouge">Sniffing</code>하게 된다면 보안에 매우 취약해진다는 단점이 있다는걸 쉽게 알 수 있다. <del>키 길이를 해결될 문제이지 않을까</del> 또한, <code class="language-plaintext highlighter-rouge">KDF</code>라는 것과 함께 신뢰성을 보장할 수 없는 클라우드 서비스에 파일을 저장할 때 사용할 수 있다고 한다. <code class="language-plaintext highlighter-rouge">AES</code>가 그 예이다.</p>
+
+<h2 id="비대칭-암호화-asymmetric-cryptography">비대칭 암호화 (Asymmetric cryptography)</h2>
+<hr />
+<p align="center"><img src="https://user-images.githubusercontent.com/26760693/104847414-33a34e80-5923-11eb-8ce3-c51878fe53a1.jpg" /></p>
+
+<p>대칭키 암호화에 비해 암호화 복호화 연산이 느려 대용량 데이터를 암호화 하기가 어렵다. 자신만의 개인키를 이용해 복호화 하므로 키의 관리가 쉽고, 키의 분배 문제가 해결된다. <code class="language-plaintext highlighter-rouge">SSH</code>, <code class="language-plaintext highlighter-rouge">email</code> 등에서 쓰이고, 유명한 <code class="language-plaintext highlighter-rouge">Telegram</code> 앱에서도 비대칭 암호화가 일부 이루어진다고 생각할 수 있다. <code class="language-plaintext highlighter-rouge">RSA</code>라는 유명한 알고리즘도 이에 포함이 된다.</p>
+
+<p>추가로, 현재 많은 웹 프로토콜들이 <code class="language-plaintext highlighter-rouge">Hybrid cryptography</code>라는 혼합형 방식을 사용해 안전한 접속을 설정하고 있다는 사실을 알아두면 더 이쪽으로 관심을 가지기 싫어질 수 있다. 😁😂🤣</p>
+
+<h2 id="참고링크">참고링크</h2>
+<hr />
+<p>MIT(Missing-Semester) :: <a href="!https://missing-semester-kr.github.io/2020/security/">Security &amp; Cryptography</a><br />
+NCSoft-danbi :: <a href="!https://danbi-ncsoft.github.io/study/2018/12/06/entropy.html">엔트로피와 의사결정나무</a><br />
+Cryptographic hash function :: <a href="!https://en.wikipedia.org/wiki/Cryptographic_hash_function">WIKI</a></p>
+
+:ET

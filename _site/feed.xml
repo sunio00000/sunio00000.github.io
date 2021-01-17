@@ -5,8 +5,8 @@
     <description>Make me better than i was before.</description>
     <link>https://sunio00000.github.io//</link>
     <atom:link href="https://sunio00000.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 Jan 2021 20:16:25 +0900</pubDate>
-    <lastBuildDate>Sun, 17 Jan 2021 20:16:25 +0900</lastBuildDate>
+    <pubDate>Mon, 18 Jan 2021 00:40:14 +0900</pubDate>
+    <lastBuildDate>Mon, 18 Jan 2021 00:40:14 +0900</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -27,19 +27,22 @@
 나는 현재 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(1)&lt;/code&gt; 슬랙에 식단 봇을 매 오전 10시마다 cronlab 스케쥴러로 실행시키는 서버와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(2)&lt;/code&gt; 0주차 프로젝트의 웹서비스를 작동시킬 서버, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(3)&lt;/code&gt; 현재 mallocLab을 진행하는 서버 총 3개의 서버를 작동시키고 있다. 곧 청구서가 날라올 것만 같은 상태이다.&lt;/p&gt;
 
 &lt;p&gt;나는 &lt;bold&gt;&quot;EC2 서버를 쓰지 않을 때는 종료하고 사용하고 싶을 때만 켜고 싶다&quot;&lt;/bold&gt; 라는 생각으로 Instance Scheduler를 찾아보았으나 나의 작업 시간이 무작위적이기 때문에 수동으로 직접 켜고 꺼주는 방법을 사용해야했다. &lt;strong&gt;콘솔의 GUI를 통해 직접 이를 구동하는 방법은 너무 비효율적이고 번거로웠다.&lt;/strong&gt; 😨 그 작은 오버헤드를 줄이고자 여기서는 AWS CLI를 이용하기로 했다.&lt;/p&gt;
+
 &lt;h2 id=&quot;2-aws-cli-설치하기&quot;&gt;2. AWS CLI 설치하기&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AWS CLI&lt;/code&gt;는 말그대로 AWS가 제공하는 Commnad Line Interface이다. 우리가 터미널을 통해 AWS Console에서 제공하는 많은 기능들을 명령어로 사용할 수 있다는 의미이다.&lt;/p&gt;
 
 &lt;p&gt;이 부분을 진행하기 이전에 OS 별로 설정이 필요로 할 것 같다. 나는 현재 Local의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Windows&lt;/code&gt; 에서 EC2 instance의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu&lt;/code&gt; 를 &lt;bold&gt;&quot;실행&quot;&lt;/bold&gt;할 때와 EC2 instance의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu&lt;/code&gt; 상에서 &lt;bold&gt;&quot;중지&quot;&lt;/bold&gt;를 하게 되기 때문에 이 절차를 따르기 위해 내 Local 과 EC2 instance 모두에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awscli&lt;/code&gt; 를 인스톨 하도록 한다. &lt;del&gt;버전이 두가지가 있지만 CLI2 를 받았다&lt;/del&gt;&lt;/p&gt;
 
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/104839654-caf9a900-5905-11eb-8b47-81ab536ff53e.jpg&quot; /&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;windows env&lt;br /&gt;
+    &lt;p&gt;&lt;strong&gt;windows env&lt;/strong&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;a href=&quot;!https://awscli.amazonaws.com/AWSCLIV2.msi&quot;&gt;msi 파일&lt;/a&gt;을 다운받아 설치해분다.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;ubuntu env&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;ubuntu env&lt;/strong&gt;&lt;/p&gt;
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;update
 &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;awscli
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
@@ -135,24 +138,60 @@ Get public IP address via awscli :: &lt;a href=&quot;!https://serverfault.com/qu
 
 &lt;h2 id=&quot;엔트로피&quot;&gt;엔트로피&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;p&gt;고등학교 필독서에서 설명하던 열역학의 그 엔트로피가 아니다. 정보학(informatics)에도 엔트로피라는 개념이 있는데, 이는 &lt;bold&gt;정보를 표현하는 하나의 단위&lt;/bold&gt;이다. 단위의 표현 방법은 우리에게 너무 익숙한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bit&lt;/code&gt;를 사용한다.&lt;/p&gt;
+&lt;p&gt;고등학교 필독서에서 설명하던 열역학의 그 엔트로피가 아니다. 정보학(informatics)에도 엔트로피라는 개념이 있는데, 이는 임의성을 정도를 나타내는 척도이며, &lt;bold&gt;&quot;정보&quot;를 표현하는 하나의 단위&lt;/bold&gt;이다. ‘그 단위’의 표현 방법은 우리에게 너무 익숙한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bit&lt;/code&gt;를 사용한다.&lt;/p&gt;
 
-&lt;h2 id=&quot;hash&quot;&gt;Hash&lt;/h2&gt;
-&lt;hr /&gt;
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt; #&lt;/code&gt;(해쉬태그), 어디선가 많이 들어본 단어이다. 맞다 그 Hash다.&lt;/p&gt;
-&lt;h2 id=&quot;키-유도-함수-key-derivation-functions&quot;&gt;키 유도 함수 (Key derivation functions)&lt;/h2&gt;
-&lt;hr /&gt;
+&lt;p&gt;나는 그저 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bit&lt;/code&gt;는 0과 1을 표현하는 수단으로 알고 있었는데, 오! 동전의 앞면과 뒷면의 엔트로피를 나타내면 그것이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1 bit&lt;/code&gt;인 것이다. 6면 주사위의 엔트로피는 그럼 어떻게 될까? 
+\(entrophy = \log_2 N \quad N \ of \ Possiblity\)&lt;br /&gt;
+위 식을 토대로 보면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.58 bit&lt;/code&gt; 정도의 임의성을 가지고 있다고 생각할 수 있고, 이는 동전 던지기보다 2.6배정도 복잡한 임의성을 가지고 있다고 판단하게 되는 것이다.&lt;br /&gt;
+아래의 그림은 xkcd의 코믹스 중 일부인데, Password를 어떻게 설정하는 것이 더 안전한지에 대한 이야기를 보여준다.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/104845587-97c11500-5919-11eb-88bd-2ea94299b297.png&quot; width=&quot;400&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;대칭키-암호-symmetric-cryptography&quot;&gt;대칭키 암호 (Symmetric cryptography)&lt;/h2&gt;
+&lt;p&gt;요약하자면, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;brute force&lt;/code&gt;방식으로 암호를 해킹한다는 가정 하에 암호를 구성할 때, 우리가 읽기 복잡해 보이는 암호를 짧게 작성하는 것보다는 많은 단어를 구성하여 많은 임의성을 주는 것이 더 해킹하기 어렵다는 이야기이다.&lt;/p&gt;
+
+&lt;p&gt;그러므로 &lt;bold&gt;확률이 낮을수록 어떤 정보일지는 불확실하게 되고, 우리는 이때 '정보가 많다', '엔트로피가 높다'고 표현한다.&lt;/bold&gt; - 위키백과&lt;/p&gt;
+
+&lt;h2 id=&quot;hash-function&quot;&gt;Hash Function&lt;/h2&gt;
 &lt;hr /&gt;
+&lt;p&gt;SNS를 많이 해보았다면 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt;(해쉬태그)를 어디선가 많이 보았을 것이다. 맞다 우리가 논할 Hash가 그 Hash다.&lt;br /&gt;
+정의하자면, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hash&lt;/code&gt;는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hash Function&lt;/code&gt;에 의해 얻어지는 값으로서 Hash Function은 &lt;bold&gt;임의의 길이의 데이터가 고정된 길이의 데이터로 Mapping 해주는 함수&lt;/bold&gt;이다.&lt;br /&gt;
+개발자가 가장 가깝게 볼 수 있는 Hash Function의 사용은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Git&lt;/code&gt;의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Commit id&lt;/code&gt;로 사용되는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SHA-1&lt;/code&gt; key이다. (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;160 bit&lt;/code&gt;로 표현된 16진수 40글자로 이루어져 있다.)&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git checkout &lt;span class=&quot;s2&quot;&gt;&quot;SHA-1 hash 8자리&quot;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 특정 commit으로 이동하기&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/104846179-96451c00-591c-11eb-9c24-4fa8824d894d.png&quot; width=&quot;200&quot; height=&quot;350&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hash Function의 특징은 다음과 같다.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Deterministic : 같은 입력 값은 항상 같은 결과를 도출한다.&lt;/li&gt;
+  &lt;li&gt;Non-invertible : 원하는 출력 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;h&lt;/code&gt;에 대하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hash(m) = h&lt;/code&gt; 인 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;m&lt;/code&gt;을 찾기가 어렵다.&lt;/li&gt;
+  &lt;li&gt;Target collision resistant : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;m1&lt;/code&gt; 이 주어졌을 때, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hash(m1) = Hash(m2)&lt;/code&gt;를 만족하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;m2&lt;/code&gt;를 찾기 어렵다.&lt;/li&gt;
+  &lt;li&gt;Collision resistant : &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hash(m1) = Hash(m2)&lt;/code&gt;를 만족하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;m1&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;m2&lt;/code&gt;를 찾기 어려움&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;이러한 이유로 Hash Function은 암호화에 사용되며, 굉장히 다양한 종류의 Function을 가지고 있다.&lt;/p&gt;
+
+&lt;h2 id=&quot;대칭키-암호화-symmetric-cryptography&quot;&gt;대칭키 암호화 (Symmetric cryptography)&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/104847416-356d1200-5923-11eb-86e2-af340d6dba9f.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;대칭키 암호화는 암호화와 복호화에 모두 같은 암호키를 사용하는 방식을 말한다.&lt;br /&gt;
+대칭키 암호는 암호화에 연산 속도가 굉장히 빨라 효율적인 암호 시스템을 가질 수 있다는 장점 이외에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Public Key&lt;/code&gt;를 공유(전송)하기 때문에 중간에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sniffing&lt;/code&gt;하게 된다면 보안에 매우 취약해진다는 단점이 있다는걸 쉽게 알 수 있다. &lt;del&gt;키 길이를 해결될 문제이지 않을까&lt;/del&gt; 또한, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;KDF&lt;/code&gt;라는 것과 함께 신뢰성을 보장할 수 없는 클라우드 서비스에 파일을 저장할 때 사용할 수 있다고 한다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AES&lt;/code&gt;가 그 예이다.&lt;/p&gt;
 
 &lt;h2 id=&quot;비대칭-암호화-asymmetric-cryptography&quot;&gt;비대칭 암호화 (Asymmetric cryptography)&lt;/h2&gt;
 &lt;hr /&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/104847414-33a34e80-5923-11eb-8ce3-c51878fe53a1.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;대칭키 암호화에 비해 암호화 복호화 연산이 느려 대용량 데이터를 암호화 하기가 어렵다. 자신만의 개인키를 이용해 복호화 하므로 키의 관리가 쉽고, 키의 분배 문제가 해결된다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SSH&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;email&lt;/code&gt; 등에서 쓰이고, 유명한 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Telegram&lt;/code&gt; 앱에서도 비대칭 암호화가 일부 이루어진다고 생각할 수 있다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RSA&lt;/code&gt;라는 유명한 알고리즘도 이에 포함이 된다.&lt;/p&gt;
+
+&lt;p&gt;추가로, 현재 많은 웹 프로토콜들이 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hybrid cryptography&lt;/code&gt;라는 혼합형 방식을 사용해 안전한 접속을 설정하고 있다는 사실을 알아두면 더 이쪽으로 관심을 가지기 싫어질 수 있다. 😁😂🤣&lt;/p&gt;
 
 &lt;h2 id=&quot;참고링크&quot;&gt;참고링크&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;MIT(Missing-Semester) :: &lt;a href=&quot;!https://missing-semester-kr.github.io/2020/security/&quot;&gt;Security &amp;amp; Cryptography&lt;/a&gt;&lt;br /&gt;
-NCSoft-danbi :: &lt;a href=&quot;!https://danbi-ncsoft.github.io/study/2018/12/06/entropy.html&quot;&gt;엔트로피와 의사결정나무&lt;/a&gt;&lt;/p&gt;
+NCSoft-danbi :: &lt;a href=&quot;!https://danbi-ncsoft.github.io/study/2018/12/06/entropy.html&quot;&gt;엔트로피와 의사결정나무&lt;/a&gt;&lt;br /&gt;
+Cryptographic hash function :: &lt;a href=&quot;!https://en.wikipedia.org/wiki/Cryptographic_hash_function&quot;&gt;WIKI&lt;/a&gt;&lt;/p&gt;
+
 </description>
         <pubDate>Fri, 15 Jan 2021 13:00:00 +0900</pubDate>
         <link>https://sunio00000.github.io//til/2021/01/15/til.html</link>
