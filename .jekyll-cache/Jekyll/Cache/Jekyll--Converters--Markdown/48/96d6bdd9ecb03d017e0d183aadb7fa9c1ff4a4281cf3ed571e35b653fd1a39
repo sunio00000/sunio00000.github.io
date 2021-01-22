@@ -1,0 +1,34 @@
+I"7<blockquote>
+  <p>컴퓨터에 에프킬라 뿌리기.</p>
+</blockquote>
+
+<h2 id="tools">Tools</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Ubuntu 18.04</code> /
+<code class="language-plaintext highlighter-rouge">gdb</code>, <code class="language-plaintext highlighter-rouge">CLI</code></li>
+</ul>
+
+<h2 id="1-prologue--issue">1. Prologue &amp; Issue</h2>
+<hr />
+
+<h2 id="2-aws-cli-설치하기">2. AWS CLI 설치하기</h2>
+<hr />
+
+<h2 id="3-aws-iam-보안-자격-증명">3. AWS IAM 보안 자격 증명!</h2>
+<hr />
+
+<h2 id="4-ec2-시작중지하기">4. EC2 시작/중지하기</h2>
+<hr />
+
+<h2 id="5-additional">5. Additional</h2>
+<hr />
+
+<h2 id="6-epilogue">6. Epilogue</h2>
+<hr />
+<p>🎉<strong>이제 CLI을 통해 EC2를 시작/중지할 수 있어, 콘솔을 다시 볼일이 없다!!🎉</strong></p>
+
+<h2 id="7-reference">7. Reference</h2>
+<hr />
+<p>gdb 사용하기 :: <a href="!https://5log.tistory.com/148">tistory blog</a><br />
+Quick gdb Guide :: <a href="!https://condor.depaul.edu/glancast/373class/docs/gdb.html">condor.depaul.edu</a></p>
+:ET

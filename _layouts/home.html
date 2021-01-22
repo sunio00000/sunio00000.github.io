@@ -49,8 +49,9 @@ layout: default
         {{ site.data.format[tag] }}
       </span>
     {% endfor %}
-    <hr>
+    <hr><br>
     <div class="row">
+      
       <div class="col-lg-8 col-md-10 mx-auto">
 
         {{ content }}
@@ -65,11 +66,11 @@ layout: default
             {% endif %}>
           <article class="post-preview">
             <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-              <h2 class="post-title">{{ post.title }}</h2>
+              <h1 class="post-title">{{ post.title }}</h1>
               {% if post.subtitle %}
-              <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+              <h5 class="post-subtitle">{{ post.subtitle }}</h5>
               {% else %}
-              <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
+              <h4 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h4>
               {% endif %}
 
             </a>
