@@ -5,8 +5,8 @@
     <description>Make me better than i was before.</description>
     <link>https://sunio00000.github.io//</link>
     <atom:link href="https://sunio00000.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 23 Jan 2021 02:29:39 +0900</pubDate>
-    <lastBuildDate>Sat, 23 Jan 2021 02:29:39 +0900</lastBuildDate>
+    <pubDate>Sat, 23 Jan 2021 11:45:06 +0900</pubDate>
+    <lastBuildDate>Sat, 23 Jan 2021 11:45:06 +0900</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -37,22 +37,50 @@
 
 &lt;h2 id=&quot;3-on-command-line&quot;&gt;3. On Command Line&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;awsbegin&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aws&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ec2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start-instances&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--instance-ids&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# powershell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$profile&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# bashrc와 equivalant한 powershell의 무언가의 위치를 찾는다.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;awsbegin&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aws&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ec2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start-instances&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--instance-ids&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;awsend&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aws&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ec2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stop-instances&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--instance-ids&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set-Alias&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;awsstart&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;awsbegin&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set-Alias&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;awsstop&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;awsend&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vim ~/.bashrc
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Windows Powershell&lt;/code&gt;에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bashrc&lt;/code&gt;를 대신하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;profile&lt;/code&gt; 파일을 찾아 수정해야한다.&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;profile&lt;/code&gt;의 내용은 powershell이 init되는 순간에 명령어를 모두 동작하는 것으로 생각된다.&lt;br /&gt;
+이를 통해, 명령어를 매번 입력하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alias&lt;/code&gt;를 등록해야하는 수고를 덜게 되었다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# bash shell&lt;/span&gt;
+vim ~/.bashrc
 &lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;awsstart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;‘aws ec2 start-instances &lt;span class=&quot;nt&quot;&gt;--instance-ids&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;’ 
 &lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;awsstop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;‘aws ec2 stop-instances &lt;span class=&quot;nt&quot;&gt;--instance-ids&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위는 AWS linux bash에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alias&lt;/code&gt;를 등록하는 과정이다.&lt;/p&gt;
+
 &lt;h2 id=&quot;4-result&quot;&gt;4. Result&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523990-69c93f80-5d22-11eb-9f30-0830a8aae2ad.png&quot; width=&quot;550&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523995-6afa6c80-5d22-11eb-8e44-a5e1e9cd1c79.png&quot; width=&quot;550&quot; height=&quot;50&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523997-6b930300-5d22-11eb-959c-66e6bff485ae.png&quot; width=&quot;550&quot; height=&quot;50&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523998-6c2b9980-5d22-11eb-8369-f1fe3a8ea617.png&quot; width=&quot;550&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105524000-6c2b9980-5d22-11eb-94cf-39696aa69ae2.png&quot; width=&quot;550&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awss&lt;/code&gt; function을 생성합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523995-6afa6c80-5d22-11eb-8e44-a5e1e9cd1c79.png&quot; width=&quot;450&quot; height=&quot;35&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awsstart&lt;/code&gt; 라는 별명에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awss&lt;/code&gt; function을 적용하도록 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523997-6b930300-5d22-11eb-959c-66e6bff485ae.png&quot; width=&quot;450&quot; height=&quot;35&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Get-Alias&lt;/code&gt; command로 명령어 등록을 확인할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523998-6c2b9980-5d22-11eb-8369-f1fe3a8ea617.png&quot; width=&quot;700&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awsstart&lt;/code&gt;를 실행해봅니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105524000-6c2b9980-5d22-11eb-94cf-39696aa69ae2.png&quot; width=&quot;500&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$profile&lt;/code&gt;을 통해 명령어가 매번 powershell을 부팅할 때, 적용되도록 합니다. (save)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105566226-622f8800-5d6e-11eb-9aa1-342318ce0832.png&quot; width=&quot;700&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AWS EC2 Ubuntu&lt;/code&gt; shell 상에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awsstop&lt;/code&gt; 명령을 실행한 모습이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523990-69c93f80-5d22-11eb-9f30-0830a8aae2ad.png&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;5-epilogue&quot;&gt;5. Epilogue&lt;/h2&gt;
 &lt;hr /&gt;
