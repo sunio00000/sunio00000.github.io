@@ -5,9 +5,113 @@
     <description>Make me better than i was before.</description>
     <link>https://sunio00000.github.io//</link>
     <atom:link href="https://sunio00000.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 23 Jan 2021 11:45:06 +0900</pubDate>
-    <lastBuildDate>Sat, 23 Jan 2021 11:45:06 +0900</lastBuildDate>
+    <pubDate>Wed, 27 Jan 2021 10:18:44 +0900</pubDate>
+    <lastBuildDate>Wed, 27 Jan 2021 10:18:44 +0900</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>🥣 철학자들의 식사.</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;via Stanford University CS110 ..&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WEB complier&lt;/code&gt; - &lt;a href=&quot;!https://www.onlinegdb.com/&quot;&gt;OnlineGDB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C/C++&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-prologue&quot;&gt;1. Prologue&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;식사하는 철학자들 문제는 Operating System에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cocurrency&lt;/code&gt;&lt;em&gt;병행성&lt;/em&gt; 와 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;deadlock&lt;/code&gt; &lt;em&gt;교착상태&lt;/em&gt; 을 설명하는 대표적인 문제이다.&lt;/p&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;다섯&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;명의&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;철학자가&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;원탁에&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;앉아&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;있고&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;각자의&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;앞에는&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;스파게티가&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;있고&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;양옆에&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;포크가&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;하나씩&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;있다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;  
+&lt;span class=&quot;nx&quot;&gt;그리고&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;각각의&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;철학자는&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;다른&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;철학자에게&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;말을&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;할&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;없다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;이때&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;철학자가&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;스파게티를&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;먹기&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;위해서는&lt;/span&gt;  
+&lt;span class=&quot;nx&quot;&gt;양&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;옆의&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;포크를&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;동시에&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;들어야&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;한다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;  
+&lt;span class=&quot;nx&quot;&gt;이때&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;각각의&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;철학자가&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;왼쪽의&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;포크를&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;들고&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;그&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;다음&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;오른쪽의&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;포크를&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;들어서&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;스파게티를&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;먹는&lt;/span&gt;  
+&lt;span class=&quot;nx&quot;&gt;알고리즘을&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;가지고&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;있으면&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;다섯&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;철학자는&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;동시에&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;왼쪽의&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;포크를&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;들&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;있으나&lt;/span&gt;  
+&lt;span class=&quot;nx&quot;&gt;오른쪽의&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;포크는&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;이미&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;가져가진&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;상태이기&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;때문에&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;다섯&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;명&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;모두가&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;무한정&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;서로를&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;기다리는&lt;/span&gt;  
+&lt;span class=&quot;nx&quot;&gt;교착&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;상태에&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;빠지게&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;될&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;있다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Wiki&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;그림으로 보면 다음과 같다.&lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105862752-7e178000-6033-11eb-9348-677e9479183d.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Px&lt;/code&gt; &lt;em&gt;x번째 철학자&lt;/em&gt; , &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fx&lt;/code&gt; &lt;em&gt;x번째 포크&lt;/em&gt; 라고 할 때,&lt;/p&gt;
+
+&lt;h2 id=&quot;2-alias-command&quot;&gt;2. Alias Command&lt;/h2&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;3-on-command-line&quot;&gt;3. On Command Line&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# powershell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$profile&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# bashrc와 equivalant한 powershell의 무언가의 위치를 찾는다.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;awsbegin&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aws&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ec2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start-instances&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--instance-ids&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;awsend&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;aws&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ec2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stop-instances&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--instance-ids&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set-Alias&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;awsstart&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;awsbegin&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Set-Alias&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;awsstop&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;awsend&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Windows Powershell&lt;/code&gt;에서는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bashrc&lt;/code&gt;를 대신하는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;profile&lt;/code&gt; 파일을 찾아 수정해야한다.&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;profile&lt;/code&gt;의 내용은 powershell이 init되는 순간에 명령어를 모두 동작하는 것으로 생각된다.&lt;br /&gt;
+이를 통해, 명령어를 매번 입력하여 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alias&lt;/code&gt;를 등록해야하는 수고를 덜게 되었다.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# bash shell&lt;/span&gt;
+vim ~/.bashrc
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;awsstart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;‘aws ec2 start-instances &lt;span class=&quot;nt&quot;&gt;--instance-ids&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;’ 
+&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;awsstop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;‘aws ec2 stop-instances &lt;span class=&quot;nt&quot;&gt;--instance-ids&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;위는 AWS linux bash에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Alias&lt;/code&gt;를 등록하는 과정이다.&lt;/p&gt;
+
+&lt;h2 id=&quot;4-result&quot;&gt;4. Result&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awss&lt;/code&gt; function을 생성합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523995-6afa6c80-5d22-11eb-8e44-a5e1e9cd1c79.png&quot; width=&quot;450&quot; height=&quot;35&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awsstart&lt;/code&gt; 라는 별명에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awss&lt;/code&gt; function을 적용하도록 합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523997-6b930300-5d22-11eb-959c-66e6bff485ae.png&quot; width=&quot;450&quot; height=&quot;35&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Get-Alias&lt;/code&gt; command로 명령어 등록을 확인할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523998-6c2b9980-5d22-11eb-8369-f1fe3a8ea617.png&quot; width=&quot;700&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awsstart&lt;/code&gt;를 실행해봅니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105524000-6c2b9980-5d22-11eb-94cf-39696aa69ae2.png&quot; width=&quot;500&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$profile&lt;/code&gt;을 통해 명령어가 매번 powershell을 부팅할 때, 적용되도록 합니다. (save)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105566226-622f8800-5d6e-11eb-9aa1-342318ce0832.png&quot; width=&quot;700&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AWS EC2 Ubuntu&lt;/code&gt; shell 상에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awsstop&lt;/code&gt; 명령을 실행한 모습이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523990-69c93f80-5d22-11eb-9f30-0830a8aae2ad.png&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;5-epilogue&quot;&gt;5. Epilogue&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;기술은 써먹어야 의미가 있는거야.&lt;/p&gt;
+
+&lt;h2 id=&quot;6-reference&quot;&gt;6. Reference&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;h4 id=&quot;thank-for-영동zeroist&quot;&gt;Thank For &lt;a href=&quot;!https://github.com/orgs/SWJungle/people/zeroistfilm&quot;&gt;영동zeroist🤩&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;powershell에서 .bashrc를? :: &lt;a href=&quot;!https://superuser.com/questions/1090141/does-powershell-have-any-sort-of-bashrc-equivalent&quot;&gt;Does Powershell have any sort of .bashrc equivalent?&lt;/a&gt;&lt;br /&gt;
+windows powershell alias commands :: &lt;a href=&quot;!https://gocoder.tistory.com/1510&quot;&gt;powershell alias&lt;/a&gt;&lt;br /&gt;
+powershell :: &lt;a href=&quot;!https://stackoverflow.com/questions/2858484/creating-aliases-in-powershell-for-git-commands&quot;&gt;Creating aliases in PowerShell for git commands?&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 26 Jan 2021 13:00:00 +0900</pubDate>
+        <link>https://sunio00000.github.io//til/2021/01/26/til.html</link>
+        <guid isPermaLink="true">https://sunio00000.github.io//til/2021/01/26/til.html</guid>
+        
+        <category>all</category>
+        
+        <category>os</category>
+        
+        
+        <category>TIL</category>
+        
+      </item>
     
       <item>
         <title>💻 Command Line을 쉽게! Alias 커맨드!</title>

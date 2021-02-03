@@ -40,7 +40,7 @@ bold {
     font-weight: bold;
 }
 p {
-    font-size: 20px;
+    font-size: 16px;
 }
 .hidden {
     display:none;
@@ -86,14 +86,17 @@ pre.highlight {
 td.code {
     padding: 1em .5em;
 }
-
+em {
+    color: grey;
+    font-size: 12px;
+}
 pre {
     overflow-y: scroll;
     word-wrap: normal;
     border-radius: 5px;
     font-size: 14px;
     font-family: 'NEXON Lv1 Gothic OTF Light';
-    background-color:#122b3b;
+    background-color:#12444b;
     color: white;
     padding: 3px 3px 3px 3px;
     margin: 2px 2px 2px 2px;
@@ -104,8 +107,8 @@ code {
   font-size: 16px;
   font-family: 'NEXON Lv1 Gothic OTF';
   background-color: #122b3b;
-  color: white;
-  padding: 3px 3px 3px 3px;
+  color: #fffff0;
+  padding: 2px 2px 2px 2px;
   margin: 2px 2px 2px 2px;
 }
 
@@ -114,7 +117,7 @@ br {
 }
 ul, ol {
     font-family: 'NEXON Lv1 Gothic OTF';
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 li {

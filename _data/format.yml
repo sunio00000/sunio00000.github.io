@@ -21,4 +21,5 @@ slack: SLACK
 project: PROJECT
 windows: WINDOWS
 terminal: TERMINAL
+os: OS
 ...
