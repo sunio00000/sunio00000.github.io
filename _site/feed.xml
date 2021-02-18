@@ -5,9 +5,106 @@
     <description>Make me better than i was before.</description>
     <link>https://sunio00000.github.io//</link>
     <atom:link href="https://sunio00000.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 27 Jan 2021 10:18:44 +0900</pubDate>
-    <lastBuildDate>Wed, 27 Jan 2021 10:18:44 +0900</lastBuildDate>
+    <pubDate>Thu, 18 Feb 2021 10:53:20 +0900</pubDate>
+    <lastBuildDate>Thu, 18 Feb 2021 10:53:20 +0900</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>💡 struct OS PintOS;</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;운영체제를 직접 구현하다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AWS Linux&lt;/code&gt;, 뭐 기타 등등 …&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;행군-시작&quot;&gt;행군 시작&lt;/h2&gt;
+
+&lt;p&gt;군대에서 행군하던 때가 생각난다. 깜깜한 도로를 정처없이 걷다가보면 결국 도착지에 도달할 것만 같다. 
+지금 내 모습이다 새벽 3시… 배고프고 졸리다.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2달 뒤에 나도 직접 쳐보리라…. &lt;em&gt;ssxbxl done&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;이 포스트는 PintOS를 개발하며 배운 내용을 정리하는 공간이 될 것 같다.&lt;br /&gt;
+정글에서의 활동 2달여 간의 시간 동안 자료구조, 알고리즘, Malloc Lab , Tiny Web Server 프로젝트를 마쳤다. 이어서 우리는 2달여 간 Kaist의 실제 학부 과정에 있는 PintOS 개발에 돌입했다. 🎯&lt;br /&gt;
+시간이나 챕터 단위로 진행하고 그 때마다 포스팅을 하게 될 것같구, 내용이 모든 것을 포함한다고 보장하지는 못할 것 같다..&lt;/p&gt;
+
+&lt;p&gt;우리는 3명이 한 조가 되어 프로젝트를 진행하게 되는데 일반적으로,&lt;br /&gt;
+매 주 하나의 PROJECT를 진행하게 되며, 이에 관련된 내용을 포스팅할 것이다. 내가 완전히 이해하고 꼭 짚고 넘어가고 싶은 포인트만 적어보련다.&lt;/p&gt;
+
+&lt;p&gt;📌 PROJECT1 : THREADS&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Alarm Clock&lt;/li&gt;
+  &lt;li&gt;Priority Scheduling&lt;/li&gt;
+  &lt;li&gt;Advanced Schedular&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;📌 PROJECT2 : USER PROGRAMMING&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Argument Passing&lt;/li&gt;
+  &lt;li&gt;User Memory&lt;/li&gt;
+  &lt;li&gt;System Calls&lt;/li&gt;
+  &lt;li&gt;Process Termination Messages&lt;/li&gt;
+  &lt;li&gt;Denying Writes to Executables&lt;/li&gt;
+  &lt;li&gt;Extend File Description&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;📌 PROJECT3 : VIRTUAL MEMORY&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Memory Management&lt;/li&gt;
+  &lt;li&gt;Anonymouse Page&lt;/li&gt;
+  &lt;li&gt;Stack Growth&lt;/li&gt;
+  &lt;li&gt;Memory Mapped Files&lt;/li&gt;
+  &lt;li&gt;Swap In/Out&lt;/li&gt;
+  &lt;li&gt;Copy-On-Write&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;📌 PROJECT4 : FILE SYSTEM&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Indexed and Extensible Files&lt;/li&gt;
+  &lt;li&gt;Subdirectories and Soft Links&lt;/li&gt;
+  &lt;li&gt;Buffer Cache&lt;/li&gt;
+  &lt;li&gt;Synchronization&lt;/li&gt;
+  &lt;li&gt;Mount&lt;/li&gt;
+  &lt;li&gt;FileSystem Journaling&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;감상-회고&quot;&gt;감상 회고&lt;/h2&gt;
+
+&lt;p&gt;📕[1주차]&lt;br /&gt;
+다행히도 1주 차는 좋은 가이드라인이 있어 시간 안에 문제를 잘 해결 한 것 같다.&lt;br /&gt;
+인터럽트 문제가 발생할 때는, 포인터들의 주소 값이 NULL이 아닌지 체크를 꼭 하자.&lt;br /&gt;
+네트워크 스터디, 알고리즘 스터디를 병행하고 있어 시간 조율하는 과정에서 많은 정신적, 체력적 소모가 있었다. 1주차에서 이런 감정을 느껴 조금 불안하다고 생각하는 중이다.&lt;br /&gt;
+프론트엔드 스터디도 시작해야하는데 스터디를 조금 줄여야 하는가 생각을 하게 된다.&lt;/p&gt;
+
+&lt;p&gt;📗[2주차]&lt;br /&gt;
+USER PROGRAMMING을 개발하는 2주차를 마쳤다. /USERPROG/ 안의 테스트 케이스가 92개가 있는데 특정 케이스를 위해 수정하는 과정을 겪으면, 맞았던게 틀리고, 3개의 fail이 뜨던 중 수정을 하니 23개가 틀리는 기이 현상을 자주 경험했다. 얼마나 코드가 유기적으로 돌아가는지 직접 느낄 수 있어서 신기하면서도 굉장한 스트레스를 받게 되었다.&lt;br /&gt;
+사실, 돌이켜보니 부분적인 문제 해결에 힘쓰느라 전체적인 흐름과 구조에 대해서 상세하게 기술할 정도로 익숙하지는 못하다. 당연하겠지만, 추가적으로 이에 대해 더 개인적으로 공부하거나, 이 후 프로젝트를 진행하며 지식을 꾸준히 학습하는 것이 어쩌면 당연해 보인다.&lt;br /&gt;
+어셈블리어와 C언어에 대한 이해가 깊어질 수 있었던 한 주였다. ISA에 모든 정보?는 데이터 타입 혹은 주소 타입으로 저장되고 있다는 사실은 아직까지도 굉장히 충격적으로 다가온다.&lt;br /&gt;
+왜 그들이 C언어를 이해하면 좋은지에 대해 설파하는지 조금 깨닫게 되었다. 요는 이것이다. 어셈블리와 C언어는 모든 정보?는 데이터 타입 혹은 주소 타입으로’만’ 저장되고 있다는 사실 (ISA에 대한 추가적인 학습이 필요할 것 같다.), 그렇기 때문에 특정 어셈블리에 맵핑되는 언어로서(기계에 근접한 언어로서)의 위상을 가지고 있는 것이다.&lt;br /&gt;
+모든 행위를 메모리에 저장된 주소 타입과 값 타입으로 해결할 수 있다는 사실에 경외감을 느낀다.&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;a href=&quot;!https://casys-kaist.github.io/pintos-kaist/&quot;&gt;KAIST PintOS Intro&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 03 Feb 2021 13:00:00 +0900</pubDate>
+        <link>https://sunio00000.github.io//til/2021/02/03/til.html</link>
+        <guid isPermaLink="true">https://sunio00000.github.io//til/2021/02/03/til.html</guid>
+        
+        <category>all</category>
+        
+        <category>os</category>
+        
+        
+        <category>TIL</category>
+        
+      </item>
     
       <item>
         <title>🥣 철학자들의 식사.</title>
@@ -18,8 +115,8 @@
 &lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WEB complier&lt;/code&gt; - &lt;a href=&quot;!https://www.onlinegdb.com/&quot;&gt;OnlineGDB&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C/C++&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WEB complier&lt;/code&gt; - &lt;a href=&quot;!https://www.onlinegdb.com/&quot;&gt;OnlineGDB&lt;/a&gt;
+&lt;em&gt;**&lt;/em&gt;- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C/C++&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;1-prologue&quot;&gt;1. Prologue&lt;/h2&gt;

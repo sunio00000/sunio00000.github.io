@@ -1,0 +1,82 @@
+I"�<blockquote>
+  <p>운영체제를 직접 구현하다.</p>
+</blockquote>
+
+<h2 id="tools">Tools</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">C</code>, <code class="language-plaintext highlighter-rouge">AWS Linux</code>, 뭐 기타 등등 …</li>
+</ul>
+
+<h2 id="행군-시작">행군 시작</h2>
+
+<p>군대에서 행군하던 때가 생각난다. 깜깜한 도로를 정처없이 걷다가보면 결국 도착지에 도달할 것만 같다. 
+지금 내 모습이다 새벽 3시… 배고프고 졸리다.</p>
+
+<blockquote>
+  <p>2달 뒤에 나도 직접 쳐보리라…. <em>ssxbxl done</em></p>
+</blockquote>
+
+<p>이 포스트는 PintOS를 개발하며 배운 내용을 정리하는 공간이 될 것 같다.<br />
+정글에서의 활동 2달여 간의 시간 동안 자료구조, 알고리즘, Malloc Lab , Tiny Web Server 프로젝트를 마쳤다. 이어서 우리는 2달여 간 Kaist의 실제 학부 과정에 있는 PintOS 개발에 돌입했다. 🎯<br />
+시간이나 챕터 단위로 진행하고 그 때마다 포스팅을 하게 될 것같구, 내용이 모든 것을 포함한다고 보장하지는 못할 것 같다..</p>
+
+<p>우리는 3명이 한 조가 되어 프로젝트를 진행하게 되는데 일반적으로,<br />
+매 주 하나의 PROJECT를 진행하게 되며, 이에 관련된 내용을 포스팅할 것이다. 내가 완전히 이해하고 꼭 짚고 넘어가고 싶은 포인트만 적어보련다.</p>
+
+<p>📌 PROJECT1 : THREADS</p>
+<ol>
+  <li>Alarm Clock</li>
+  <li>Priority Scheduling</li>
+  <li>Advanced Schedular</li>
+</ol>
+
+<p>📌 PROJECT2 : USER PROGRAMMING</p>
+<ol>
+  <li>Argument Passing</li>
+  <li>User Memory</li>
+  <li>System Calls</li>
+  <li>Process Termination Messages</li>
+  <li>Denying Writes to Executables</li>
+  <li>Extend File Description</li>
+</ol>
+
+<p>📌 PROJECT3 : VIRTUAL MEMORY</p>
+<ol>
+  <li>Memory Management</li>
+  <li>Anonymouse Page</li>
+  <li>Stack Growth</li>
+  <li>Memory Mapped Files</li>
+  <li>Swap In/Out</li>
+  <li>Copy-On-Write</li>
+</ol>
+
+<p>📌 PROJECT4 : FILE SYSTEM</p>
+<ol>
+  <li>Indexed and Extensible Files</li>
+  <li>Subdirectories and Soft Links</li>
+  <li>Buffer Cache</li>
+  <li>Synchronization</li>
+  <li>Mount</li>
+  <li>FileSystem Journaling</li>
+</ol>
+
+<h2 id="감상-회고">감상 회고</h2>
+
+<p>📕[1주차]<br />
+다행히도 1주 차는 좋은 가이드라인이 있어 시간 안에 문제를 잘 해결 한 것 같다.<br />
+인터럽트 문제가 발생할 때는, 포인터들의 주소 값이 NULL이 아닌지 체크를 꼭 하자.<br />
+네트워크 스터디, 알고리즘 스터디를 병행하고 있어 시간 조율하는 과정에서 많은 정신적, 체력적 소모가 있었다. 1주차에서 이런 감정을 느껴 조금 불안하다고 생각하는 중이다.<br />
+프론트엔드 스터디도 시작해야하는데 스터디를 조금 줄여야 하는가 생각을 하게 된다.</p>
+
+<p>📗[2주차]<br />
+USER PROGRAMMING을 개발하는 2주차를 마쳤다. /USERPROG/ 안의 테스트 케이스가 92개가 있는데 특정 케이스를 위해 수정하는 과정을 겪으면, 맞았던게 틀리고, 3개의 fail이 뜨던 중 수정을 하니 23개가 틀리는 기이 현상을 자주 경험했다. 얼마나 코드가 유기적으로 돌아가는지 직접 느낄 수 있어서 신기하면서도 굉장한 스트레스를 받게 되었다.<br />
+사실, 돌이켜보니 부분적인 문제 해결에 힘쓰느라 전체적인 흐름과 구조에 대해서 상세하게 기술할 정도로 익숙하지는 못하다. 당연하겠지만, 추가적으로 이에 대해 더 개인적으로 공부하거나, 이 후 프로젝트를 진행하며 지식을 꾸준히 학습하는 것이 어쩌면 당연해 보인다.<br />
+어셈블리어와 C언어에 대한 이해가 깊어질 수 있었던 한 주였다. ISA에 모든 정보?는 데이터 타입 혹은 주소 타입으로 저장되고 있다는 사실은 아직까지도 굉장히 충격적으로 다가온다.<br />
+왜 그들이 C언어를 이해하면 좋은지에 대해 설파하는지 조금 깨닫게 되었다. 요는 이것이다. 어셈블리와 C언어는 모든 정보?는 데이터 타입 혹은 주소 타입으로’만’ 저장되고 있다는 사실 (ISA에 대한 추가적인 학습이 필요할 것 같다.), 그렇기 때문에 특정 어셈블리에 맵핑되는 언어로서(기계에 근접한 언어로서)의 위상을 가지고 있는 것이다.<br />
+모든 행위를 메모리에 저장된 주소 타입과 값 타입으로 해결할 수 있다는 사실에 경외감을 느낀다.</p>
+
+<h2 id="reference">Reference</h2>
+<hr />
+<p><a href="!https://casys-kaist.github.io/pintos-kaist/">KAIST PintOS Intro</a></p>
+:ET
