@@ -22,4 +22,5 @@ project: PROJECT
 windows: WINDOWS
 terminal: TERMINAL
 os: OS
+docker: DOCKER
 ...
