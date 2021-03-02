@@ -154,15 +154,15 @@ em { color: grey; font-size: 12px; }
 
 pre { overflow-y: scroll; word-wrap: normal; border-radius: 5px; font-size: 14px; font-family: 'NEXON Lv1 Gothic OTF Light'; background-color: #707f81; color: white; padding: 4px 4px 4px 4px; margin: 2px 2px 2px 2px; }
 
-a { color: black; font-style: bold; }
+a { color: teal; font-style: italic, bold; }
 
 code { border-radius: 5px; font-size: 16px; font-family: 'NEXON Lv1 Gothic OTF'; background-color: #122b3b; color: #fffff0; padding: 4px 5px 4px 5px; margin: 2px 2px 2px 2px; }
 
 br { margin-bottom: 15px; }
 
-ul, ol { font-family: 'NEXON Lv1 Gothic OTF'; font-size: 16px; margin-bottom: 20px; }
+li { font-size: 16px; margin-bottom: 7px; }
 
-li { margin-bottom: 10px; }
+ul, ol { font-family: 'NEXON Lv1 Gothic OTF'; font-size: 16px; margin-bottom: 20px; }
 
 br { margin: 10px; }
 

@@ -5,19 +5,19 @@
     <description>Make me better than i was before.</description>
     <link>https://sunio00000.github.io//</link>
     <atom:link href="https://sunio00000.github.io//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 Mar 2021 23:52:57 +0900</pubDate>
-    <lastBuildDate>Tue, 02 Mar 2021 23:52:57 +0900</lastBuildDate>
+    <pubDate>Wed, 03 Mar 2021 02:59:43 +0900</pubDate>
+    <lastBuildDate>Wed, 03 Mar 2021 02:59:43 +0900</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
-        <title>🐳 Docker 파일을 VSC에서 쓰고싶어요. </title>
+        <title>🐳 Docker 파일을 VSC에서 수정하고 싶어요. </title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;남들 다 쓴다는 고래 사용법.&lt;/p&gt;
+  &lt;p&gt;남들 다 쓴다는 고래 사용법 .&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu 18.04&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Docker&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shell&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FTP&lt;/code&gt; etc…&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Windows&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Docker&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shell&lt;/code&gt; etc…&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;1-이걸-왜했냐면&quot;&gt;1. 이걸 왜했냐면…&lt;/h2&gt;
@@ -27,15 +27,29 @@
 &lt;/blockquote&gt;
 
 &lt;p&gt;나만의 무기를 만들기 위한 프로젝트를 진행하기 이전에 모두의 셋업의 sync를 맞추기 위해서 docker라는 가상환경을 사용하기로 결정했다.&lt;br /&gt;
-간단한 학습과 &lt;a href=&quot;!https://github.com/orgs/SWJungle/people/zeroistfilm&quot;&gt;명쾌한 선생님🤩&lt;/a&gt;을 통해서 (“image가 뭐고 container가 뭐고, dockerhub는 뭐고… 깃헙 짭인가 엌ㅋㅋ” 등) 자잘한 지식들을 쌓았고, 실전에 적용할 수 있도록 run, pull, start 등의 간단한 커맨드에 익숙해지는 시간도 가졌다.&lt;br /&gt;
-그런데, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ubuntu&lt;/code&gt; (18.04버전) 위에서 서버를 돌리면서 프로젝트를 진행하는 모습을 상상해보니 어찌 되었던지 프로젝트를 공유하고 관리하기 위해서 깃허브와 같은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VCS&lt;/code&gt;(Version Control System)을 이용하여야 할 것이고, &lt;strong&gt;문제는 이 코드를 도커위에서 어떻게 수정 하느냐&lt;/strong&gt; 인데, 나는 (다른 팀원들도 그럴거라 믿지만) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vim 포비아&lt;/code&gt;가 있기 때문에 이를 해결하기 위해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vsc&lt;/code&gt;에서 서버의 파일을 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FTP&lt;/code&gt;를 통해 사용할 수 있도록 하는 노력을 아래에서 해볼 예쪙이다.&lt;/p&gt;
+간단한 학습과 &lt;a href=&quot;!https://github.com/orgs/SWJungle/people/zeroistfilm&quot;&gt;유쾌한 선생님🤩&lt;/a&gt;을 통해서 (image가 뭐고 container가 뭐고, dockerhub는 뭐고… 깃헙 짭인가 엌ㅋㅋ) 자잘한 지식들을 쌓았고, 실전에 적용할 수 있도록 run, pull, start 등의 간단한 커맨드에 익숙해지는 시간도 가졌다.&lt;br /&gt;
+그런데, 가상환경 위에서 서버를 돌리면서 프로젝트를 진행하는 모습을 상상해보니 프로젝트를 공유하고 관리하기 위해서 깃허브와 같은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;VCS&lt;/code&gt;(Version Control System)을 이용하여야 할 것이고, &lt;strong&gt;문제는 이 코드를 도커위에서 어떻게 수정 하느냐&lt;/strong&gt; 인데, 나는 (다른 팀원들도 그럴거라 믿지만) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vim 포비아&lt;/code&gt;가 있기 때문에 이를 해결하기 위해서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vsc&lt;/code&gt;에서 서버의 파일을 사용할 수 있도록 하는 노력을 아래에서 해볼 예정이다.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;뿐만 아니라, 서버를 docker 상에서 어떻게 운용하는지에 대한 느낌을 얻어가도록 노력해볼 예정이다.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;주의하자. 도커를 이용해 &lt;strong&gt;서버를 배포하는 것&lt;/strong&gt;과 &lt;strong&gt;개발 환경을 구축하는 것&lt;/strong&gt;은 다르다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;참고 :: &lt;a href=&quot;!http://labs.brandi.co.kr/2021/01/20/hwangsg.html&quot;&gt;도커를 통해 서버 배포하기 (브랜디)&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;2-일단-도커-container-접속하기&quot;&gt;2. 일단 도커 container 접속하기&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;p&gt;사용하고 있는 기존의 환경에 따라 다를 수 있을지도 모르겠다.&lt;br /&gt;
-나는 현재 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AWS EC2 ubuntu 18.04 버전&lt;/code&gt;으로 진행하고 있다.&lt;/p&gt;
+&lt;p&gt;사용하고 있는 기존의 환경에 따라 다를 수 있을지도 모르겠다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;나는 현재 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Windows10 WSL2&lt;/code&gt;으로 진행하고 있다.(windows에서 사용하기 위해서는 docker desktop을 설치해야한다.)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;간단한 명령어를 위에 정리해 보았다. 사실상 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker run command&lt;/code&gt;만 있으면 무적인데, 이는 환경설정이 셋업되어 있는 이미지를 받아 ‘곧바로’ 컨테이너로 실행할 수 있게 해준다. 위의 커맨드를 통한 접근을 GUI desktop을 이용해 쉽게 할 수도 있다. &lt;del&gt;간지나게 CLI를 이용하자.&lt;/del&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; docker pull &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;이미지명&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;:&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;태그&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# 1. 일단 dockerhub 어딘가에 있는 이미지를 이미지 명과 태그로 가져온다.&lt;/span&gt;
 
@@ -63,56 +77,80 @@ django               latest    eb40dcf6xx78   4 years ago    436MB
   &lt;p&gt;참고로 -it 옵션은 컨테이너로 들어갔을 때, bash로 CLI 입출력을 사용할 수 있도록 해주는 것이라고 함.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;간단한 명령어를 위에 정리해 보았다.&lt;br /&gt;
-사실상 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker run&lt;/code&gt; command만 있으면 무적인데, 환경설정이 셋업되어 있는 이미지를 컨테이너로 실행할 수 있다.&lt;/p&gt;
+&lt;p&gt;위 과정을 통해 우리는 가상의 환경을 하나 실행할 수 있게 되었고, 이제 이 위에서 파일을 수정해보자.&lt;/p&gt;
 
-&lt;p&gt;위 과정을 통해 우리는 가상의 환경을 하나 실행할 수 있게 되었고, 이제 이 위에서 간단한 서버를 돌려보자.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;django 기본 서버 열기에 대해서&lt;/li&gt;
-  &lt;li&gt;포트 연결하는 방식에 대해서&lt;/li&gt;
-  &lt;li&gt;docker compose 에 대한 이해 다시&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3-고래-등-위에서-container-접속&quot;&gt;3. 고래 등 위에서 (container 접속)&lt;/h2&gt;
+&lt;h2 id=&quot;3-고래-등-위에서&quot;&gt;3. 고래 등 위에서…&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;일단 테스트를 하기 위해 서버를 하나 돌려서 앞으로 남은 Task 들을 처리할 수 있도록 준비해보자.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;아래의 순서에 따라 진행해보자.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; git clone https://github.com/sunio00000/DockerNamu &lt;span class=&quot;c&quot;&gt;# 간단한 서버 실행 예제가 포함된 github repo&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;docker&lt;/strong&gt; image pull 받기**
+    &lt;ul&gt;
+      &lt;li&gt;사용할 이미지를 내 docker로 가져온다.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/109688354-8715e700-7bc7-11eb-9f24-39b181ae68bf.png&quot; width=&quot;700&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;docker에 접속하기&lt;/strong&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;이미지 아이디] &lt;span class=&quot;c&quot;&gt;# 이미지를 불러오고 싶다면,&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;## 혹은&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; docker start &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;컨테이너 아이디] &lt;span class=&quot;c&quot;&gt;# 컨테이너가 꺼져 있다면,&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; docker attach &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;컨테이너 아이디] &lt;span class=&quot;c&quot;&gt;# 켜져 있는 컨테이너에 접속한다면,&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/109688423-97c65d00-7bc7-11eb-8def-ab0c323b78a1.png&quot; width=&quot;700&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;이 때, run을 하면 같은 이미지의 다른 컨테이너를 생성하므로 주의해야한다.(좌측 상단 2개의 ‘dd3’)&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;github에 repo 하나를 만들어서 clone, 만약 docker 환경에 깃이 없으면 설치를 해야한다.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;4-result&quot;&gt;4. Result&lt;/h2&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; root@620a89368594:/&lt;span class=&quot;se&quot;&gt;\#&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;home
+ &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; root@620a89368594:/&lt;span class=&quot;se&quot;&gt;\#&lt;/span&gt; git clone https://github.com/sunio00000/DockerNamu &lt;span class=&quot;c&quot;&gt;# clone&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;익스텐션 설치&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;vsc의 extension을 사진의 두가지 깔아야함&lt;/li&gt;
+      &lt;li&gt;다운 과정에서 필요하다면, docker desktop을 설치하고 windows는 추가로 wsl2를 다운받게됨&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/109688413-95640300-7bc7-11eb-8efc-4ea7b5ed9807.png&quot; width=&quot;700&quot; height=&quot;500&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;수정하기&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;아래처럼 vim을 통해 수정해도 된다.
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; root@620a89368594:/&lt;span class=&quot;se&quot;&gt;\#&lt;/span&gt; vim new.py &lt;span class=&quot;c&quot;&gt;# 이렇게 할 수도 있지만...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;하지만 vsc를 통해 열면 아래 사진과 같이 바로 적용되는 것을 확인할 수 있다.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/109688432-98f78a00-7bc7-11eb-988c-6a9a88b0209b.png&quot; width=&quot;700&quot; height=&quot;500&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;깃허브 푸쉬해보기, 이 때 아마 config 설정을 요구할 거에요 충족시켜 주세요.&lt;/strong&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; root@7df4751c1e80:/&lt;span class=&quot;se&quot;&gt;\#&lt;/span&gt; git push &lt;span class=&quot;c&quot;&gt;# add, commit 다하구 푸쉬푸   쉬&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;4-마치며&quot;&gt;4. 마치며…&lt;/h2&gt;
 &lt;hr /&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awss&lt;/code&gt; function을 생성합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523995-6afa6c80-5d22-11eb-8e44-a5e1e9cd1c79.png&quot; width=&quot;450&quot; height=&quot;35&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awsstart&lt;/code&gt; 라는 별명에 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awss&lt;/code&gt; function을 적용하도록 합니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523997-6b930300-5d22-11eb-959c-66e6bff485ae.png&quot; width=&quot;450&quot; height=&quot;35&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Get-Alias&lt;/code&gt; command로 명령어 등록을 확인할 수 있습니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523998-6c2b9980-5d22-11eb-8369-f1fe3a8ea617.png&quot; width=&quot;700&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awsstart&lt;/code&gt;를 실행해봅니다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105524000-6c2b9980-5d22-11eb-94cf-39696aa69ae2.png&quot; width=&quot;500&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$profile&lt;/code&gt;을 통해 명령어가 매번 powershell을 부팅할 때, 적용되도록 합니다. (save)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105566226-622f8800-5d6e-11eb-9aa1-342318ce0832.png&quot; width=&quot;700&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AWS EC2 Ubuntu&lt;/code&gt; shell 상에서 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;awsstop&lt;/code&gt; 명령을 실행한 모습이다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/26760693/105523990-69c93f80-5d22-11eb-9f30-0830a8aae2ad.png&quot; width=&quot;600&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;이렇게 vsc 를 통해 docker의 파일을 수정하는 방법에 대해서 배울 수 있었다. 너무나 간단한 내용이지만 포스팅을 하다보니 docker는 이런 개발환경 구축의 목적 뿐 아니라 배포환경을 만드는데 너무나 적합하다는 것 같다는 생각이 들었다.&lt;/p&gt;
 
-&lt;h2 id=&quot;5-epilogue&quot;&gt;5. Epilogue&lt;/h2&gt;
-&lt;hr /&gt;
-&lt;p&gt;기술은 써먹어야 의미가 있는거야.&lt;/p&gt;
+&lt;p&gt;💡 포스팅 과정에서 몇 가지 이슈가 있는데 다음과 같다.&lt;/p&gt;
 
-&lt;h2 id=&quot;6-reference&quot;&gt;6. Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;wsl 탓인지 docker 탓인지 환경이 매우,매우,매우 느리게 느껴진다.&lt;/li&gt;
+  &lt;li&gt;원하는 폴더를 explorer로 바로바로 열어 수정하고 싶은데 아직 못찾았다.&lt;/li&gt;
+  &lt;li&gt;배포 환경을 구축하기 위해 dockerfile과 docker compose에 대해 이해할 필요가 있을 것 같다.
+    &lt;ul&gt;
+      &lt;li&gt;예를 들면, 개발을 로컬에서 하고 dockerfile을 이용해 돌아가고 있는 서버에 바로 내가 수정한 파일의 내용을 적용해(배포 자동화) 프로젝트를 진행할 수 있을 것 같다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-reference&quot;&gt;5. Reference&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;a href=&quot;!https://www.yalco.kr/36_docker/&quot;&gt;얄팍한 코딩사전 docker 명령어&lt;/a&gt;&lt;/p&gt;
 
@@ -121,6 +159,8 @@ django               latest    eb40dcf6xx78   4 years ago    436MB
 &lt;p&gt;&lt;a href=&quot;!https://changhoi.github.io/posts/docker/docker-development-env-(1)/&quot;&gt;도커로 개발환경 구축하기&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;!https://www.manualfactory.net/10964&quot;&gt;Visual Studio Code / FTP(SFTP)로 원격 서버 접속하여 파일 수정하는 방법&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;!https://89douner.tistory.com/123&quot;&gt;vscode 와 docker 연동하기&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 02 Mar 2021 13:00:00 +0900</pubDate>
         <link>https://sunio00000.github.io//til/2021/03/02/til.html</link>

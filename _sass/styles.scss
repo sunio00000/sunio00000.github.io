@@ -104,8 +104,8 @@ pre {
   }
 
 a {
-    color: black;
-    font-style: bold;
+    color:teal;
+    font-style:italic, bold;
 }
 
 code {
@@ -121,13 +121,14 @@ code {
 br {
     margin-bottom: 15px;
 }
+li {
+    font-size: 16px;
+    margin-bottom: 7px;
+}
 ul, ol {
     font-family: 'NEXON Lv1 Gothic OTF';
     font-size: 16px;
     margin-bottom: 20px;
-}
-li {
-    margin-bottom: 10px;
 }
 br {
     margin: 10px;
